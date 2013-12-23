@@ -485,11 +485,11 @@ table {
 q {
   quotes: "\201C" "\201D" "\2018" "\2019";
 }
-:lang(fr) > q {
-  quotes: "\00AB\A0" "\A0\00BB" "\201C" "\201D" "\2018" "\2019";
-}
 :lang(en) > q {
   quotes: "\201C" "\201D" "\2018" "\2019";
+}
+:lang(fr) > q {
+  quotes: "\00AB\A0" "\A0\00BB" "\201C" "\201D" "\2018" "\2019";
 }
 :lang(es) > q {
   quotes: "\00AB" "\00BB" "\201C" "\201D";
@@ -498,11 +498,12 @@ q {
   quotes: "\00AB\A0" "\A0\00BB" "\201C" "\201D";
 }
 :lang(de) > q {
-  quotes: "\00BB" "\00AB" ">" "<";
+  quotes: "\00BB" "\00AB" "\203A" "\2039";
 }
 :lang(no) > q {
-  quotes: "\00AB\A0" "\A0\00BB" "<" ">";
+  quotes: "\00AB\A0" "\A0\00BB" "\2039" "\203A";
 }
+/* [en] http://en.wikipedia.org/wiki/International_variation_in_quotation_marks */
 q:before {
   content: open-quote;
 }
