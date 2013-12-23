@@ -2,7 +2,7 @@
 
    Typographical base
    
-   Tiny Typo v1.0 | MIT License
+   Tiny Typo v1.0 | MIT License
    (c) 2010-2013 tinytypo.tetue.net
 
 ----------------------------------------------------- */
@@ -538,9 +538,11 @@ fieldset {
     /* passage a la ligne specifique pour les elements a chasse fixe */
   }
 }
-@media screen and (max-width: 640px) and (orientation: landscape) {
+/* orientation iOS5 font-size fix */
+@media (orientation: landscape) and (max-device-width: 640px) {
+  html,
   body {
-    -webkit-text-size-adjust: 70%;
+    -webkit-text-size-adjust: 100%;
   }
 }
 /* Print styles from HTML5 Boilerplate
