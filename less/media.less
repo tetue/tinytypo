@@ -1,0 +1,96 @@
+/* --------------------------------------------------
+
+   Illustrations, images and albums
+   
+   Tiny Typo v1.0 | MIT License
+   (c) 2010-2013 tinytypo.tetue.net
+
+----------------------------------------------------- */
+
+@import "var.less";
+
+// List common types NIME
+// [fr] Liste des types NIME usuels
+// - application
+// - audio
+// - example
+// - image
+// - message
+// - model
+// - multipart
+// - text
+// - video
+// - vnd
+
+/* Make images responsive by default */
+
+img,
+object,
+embed { max-width: 100%; height: auto; }
+
+object,
+embed { height: 100%; }
+
+@media print {
+	img { max-width: 100% !important; }
+}
+
+/* Remove the gap between images, videos, audio and canvas
+and the bottom of their containers: h5bp.com/i/440 */
+
+audio,
+canvas,
+video,
+img { vertical-align: middle; }
+
+/* Correct `inline-block` display not defined in IE 8/9 */
+audio,
+canvas,
+video { display: inline-block; }
+
+/* Prevent modern browsers from displaying `audio` without controls.
+Remove excess height in iOS 5 devices. */
+audio:not([controls]) { display: none; height: 0; }
+
+img { border: 0; }
+
+/* Bicubic resizing for non-native sized IMG:
+code.flickr.com/blog/2008/11/12/on-ui-quality-the-little-things-client-side-image-resizing/ */
+img { -ms-interpolation-mode: bicubic; }
+
+svg:not(:root) { overflow: hidden; }
+
+/* thumbnail */
+.thumb,
+.thumb.left { margin: 0 10px 10px 0; }
+.thumb.right { margin: 0 0 10px 10px; }
+
+/* style effects */
+img.round { border-radius: 5px; }
+img.circle { border-radius: 50%; }
+img.border { padding: 4px; background-color: #fff; border: 1px solid #bbb; }
+img.shadow { box-shadow: -1px 2px 5px 1px rgba(0, 0, 0, 0.7), -1px 2px 20px rgba(255, 255, 255, 0.6) inset; }
+// img.clean {}
+// img.wide {}
+
+/* figure */
+figure { margin: 0; margin-bottom: @p/2; text-align: center; }
+figure.center { margin-bottom: @p; }
+figure.left { margin-right: @gutter; }
+figure.right { margin-left: @gutter; }
+figure small {}
+
+@media (max-width: @screen-medium) {
+	figure { margin-bottom: @p; }
+	figure.center {}
+	figure.left { float: none; margin-right: 0; }
+	figure.right { float: none; margin-left: 0; }
+}
+
+figcaption {}
+
+/* album */
+.album { margin-bottom: @p; } // for figure or div
+.album ul { overflow: hidden; margin: 0; list-style: none; }
+.album li { float: left; margin: 0; margin: 0 10px 10px 0; }
+.album .thumb { margin: 0; }

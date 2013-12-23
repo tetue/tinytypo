@@ -1,0 +1,157 @@
+/* --------------------------------------------------
+
+   Work in progress
+   
+   Tiny Typo v1.0 | MIT License
+   (c) 2010-2013 tinytypo.tetue.net
+
+----------------------------------------------------- */
+
+@import "var.less";
+
+body { text-align: center; }
+.page { width: 40em; max-width: 800px; margin: 1em auto; text-align: left; }
+@media ( max-width: 940px) { .page { width: 80%; } }
+@media ( max-width: 400px) { .page { width: auto; margin: 1em 10px; } }
+
+section { padding-top: 3em; }
+section:First-Child { padding: 0; }
+
+/* grid */
+.half { float: left; width: 45%; margin-right: 5%; }
+.third { float: left: width: 30%; margin-right: 3%; }
+@media (max-width: @screen-medium) { .half, .third { float: none; width: 100%; margin-right: 0; } }
+
+/* header */
+header { position: relative; }
+header:before { z-index: -1; position: absolute; content: "✍"; top: 0; right: 0; font-size: 3em; line-height: 0; font-size: 18em; color: fadeout(@color,60%); }
+@media (max-width: @screen-small) { header:before { font-size: 12em; } }
+
+/* nav */
+nav#nav { margin-bottom: @p; line-height: 1; }
+nav#nav ul { margin: 0; }
+nav#nav ul li { margin: 0 !important; }
+nav#nav ul li a { display: inline-block; padding: 6px; text-decoration: none; }
+
+/* headers */
+hgroup { margin-bottom: @p/2; }
+hgroup h1,
+hgroup h2,
+hgroup h3,
+hgroup h4,
+hgroup h5,
+hgroup h6 { margin-bottom: 0; }
+.subheader { color: @color-mid; font-weight: normal; font-variant: small-caps; }
+
+/* quote */
+blockquote.text-right { padding-left: 0; padding-right: @alinea; border-width: 0 5px 0 0; }
+
+/* bouton */
+.btn { display: inline-block; white-space: nowrap; padding: .25em .75em; background-color: fadeout(@color,70%); border: 1px solid; border-radius: 6px; box-shadow: 0 2px 0 rgba(0, 0, 0, 0.2), 0 0 0 1px #fff inset; color: #333; }
+
+
+/* Variables */
+// Max width before this PARTICULAR table gets nasty
+// This query will take effect for any screen smaller than 760px and also iPads specifically.
+@media 
+only screen and (max-width: @screen-medium), (min-device-width: @screen-medium) and (max-device-width: 1024px)  {
+
+	/* Force table to not be like tables anymore */
+	#var table,
+	#var thead,
+	#var tbody,
+	#var th,
+	#var td,
+	#var tr { display: block; }
+	
+	/* Hide table headers (but not display: none;, for accessibility) */
+	#var caption,
+	#var thead tr { position: absolute; top: -9999px; left: -9999px; }
+	#var tr { border: 1px solid; }
+	#var th.text-right { text-align: left; }
+	#var td { 
+		/* Behave  like a "row" */
+		border: none;
+		border-bottom: 1px solid; 
+		position: relative;
+		padding-left: 35%;
+		text-align: left;
+	}
+	#var td:before { 
+		/* Now like a table header */
+		position: absolute;
+		/* Top/left values mimic padding */
+		top: 6px;
+		left: 6px;
+		width: 30%; 
+		padding-right: 10px; 
+		white-space: nowrap;
+	}
+	// Label the data
+	#var td:nth-of-type(1):before,
+	#var td:nth-of-type(2):before,
+	#var td:nth-of-type(3):before { color: lighten(@color-txt, 33.5%); font-size: 80%; text-align: right; }
+	#var td:nth-of-type(1):before { content: "Variable"; }
+	#var td:nth-of-type(2):before { content: "Usage"; }
+	#var td:nth-of-type(3):before { content: "Valeur"; }
+}
+
+/* --------------------------------------------------
+
+   Thème par défaut
+   pour Tiny Typo
+   © 2010-2013 tinytypo.tetue.net
+
+----------------------------------------------------- */
+
+@color-bg: #F3F3EC;
+@color-txt: darken(@color-bg,90%);
+@color-mid: darken(@color-bg,50%);
+@color: #900;
+@font1: 'Lucida Bright', Georgia, 'Times New Roman', serif;
+@font2: 'Goudy Old Style', Garamond, 'Big Caslon', Georgia, 'Times New Roman', serif;
+@font3: 'Courier New', Courier, monospace;
+
+body { background-color: @color-bg; font-family: @font1; color: @color-txt; border-top: 5px solid darken(@color-mid,30%); text-shadow: 0 1px 0 lighten(@color-bg,5%); }
+pre, code, kbd, samp, var, tt { font-family: @font3; background-color: lighten(@color-mid,45%); color: darken(@color-mid,25%); }
+
+h1,.h1,
+h2,.h2,
+h3,.h3,
+h4,.h4,
+h5,.h5,
+h6,.h6 { font-family: @font2; color: @color; }
+h1,.h1 { font-size: 2.5em; }
+h2,.h2 { font-size: 2em; }
+h3,.h3 { font-size: 1.5em; }
+h4,.h4 { font-size: 1.3em; }
+
+.lead { font-family: @font2; font-size: 150%; line-height: @line-height; }
+.lead, .lead * { color: @color; }
+.quiet { color: @color-mid; }
+
+hr, .table caption, .table th, .table  td, .box { border-color: @color-mid; }
+.table caption, .table thead { color: lighten(@color-txt,5%); }
+
+blockquote { border-color: lighten(@color-mid,39%); color: darken(@color-mid,25%); }
+blockquote:before { font-family: @font2; color: lighten(@color-mid,45%); }
+pre { padding: @font-size; border: 1px solid lighten(@color-mid,40%); }
+address { color: darken(@color-mid,25%); }
+.box { background-color: lighten(@color-mid,48%); border-color: lighten(@color-mid,40%); color: darken(@color-mid,25%); }
+
+a:link { text-decoration: none; border-bottom: 1px solid; }
+a:link, a:visited {}
+a:hover { background-color: fadeout(@color,90%); color: @color; }
+
+header { padding-top: @line-height; }
+header:before { top: -30px; }
+header h1 { color: @color; font-weight: bold; font-size: 4em; margin-bottom: .2em; }
+header:before { color: darken(@color-mid,30%); }
+nav#nav { border: 0; border: solid @color-mid; border-width: 1px 0; }
+nav#nav ul li a { padding: @p/2 @p/4; border: 0 !important; font-family: @font2; font-size: 110%; }
+@media (max-width: @screen-medium) {
+	header h1 { font-size: 2.5em; }
+	nav#nav ul li a { font-size: 110%; }
+}
+
+/* end */

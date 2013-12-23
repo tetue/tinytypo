@@ -1,0 +1,979 @@
+<!doctype html>
+<html dir="ltr" lang="fr">
+<head>
+<meta charset="utf-8">
+<title>Tiny Typo</title>
+<meta name="description" content="Base CSS pour la typo web">
+<meta name="author" content="romy.tetue.net">
+
+<meta name="viewport" content="width=device-width">
+
+<link rel="stylesheet" type="text/css" href="css/reset.css">
+<link rel="stylesheet" type="text/css" href="css/tinytypo.css">
+<link rel="stylesheet" type="text/css" href="css/demo.css">
+
+</head>
+<body>
+<div class="page">
+<header role="banner">
+	
+	<h1>Tiny&nbsp;Typo</h1>
+
+	<nav role="navigation" id="nav">
+		<ul class="list-inline"><!--
+			--><li><a href="#typo">Typo</a></li><!--
+			--><li><a href="#links">Liens</a></li><!--
+			--><li><a href="#heading">Titraille</a></li><!--
+			--><li><a href="#lists">Listes</a></li><!--
+			--><li><a href="#tables">Tableaux</a></li><!--
+			--><li><a href="#quotes">Citations</a></li><!--
+			--><li><a href="#boxes">Encadrés</a></li><!--
+			--><li><a href="#medias">Medias</a></li><!--
+			--><li><a href="#download">Télécharger</a></li>
+		</ul>
+	</nav>
+
+</header>
+
+<main role="main">
+
+<section>
+	<p>Tiny&nbsp;Typo est une base CSS pour le <strong>contenu éditorial web</strong>. Elle fait le minimum typographique nécessaire à la rédaction de documents web. Ni&nbsp;perfectionniste, ni avant-gardiste, elle&nbsp;se veut simple et robuste. C'est pourquoi elle est en HTML et CSS, sans image, ni fonte, ni JavaScript, respectueuse des standards W3C, responsive, soucieuse d'accessibilité et facile à&nbsp;utiliser.<p>
+
+	<p>Pour faciliter la personnalisation, un minimum de couleurs et polices sont déclarées dans la base Tiny&nbsp;Typo. À&nbsp;vous de compléter dans votre propre feuille de style. Des sélecteurs CSS bien pratiques, complétant le HTML natif, décrits ci-après, sont mis à disposition pour vous faciliter la vie.</p>
+
+	<p class="text-center small">Tiny&nbsp;Typo devrait fonctionner sur n'importe quel site&nbsp;: en&nbsp;pur&nbsp;<abbr title="Cascading Style Sheets" lang="en">CSS</abbr> ou avec&nbsp;LESS, avec ou sans framework, <abbr title="Content Management Framework" lang="en">CMF</abbr>&nbsp;ou&nbsp;<abbr title="Content Management System" lang="en">CMS</abbr>. Dans le cas contraire, merci de signaler les difficultés rencontrées, par&nbsp;<a href="http://romy.tetue.net/contact" rel="external" class="external">courriel</a> ou venez en discuter sur&nbsp;<a href="irc://irc.freenode.net/tinytypo" rel="external" class="external">IRC&nbsp;#tinytypo</a>.</p>
+</section>
+
+<section id="typo">
+	<h2>Paragraphes</h2>
+	<p>Tout paragraphe est marqué par l'élément HTML <code>&lt;p&gt;</code>. L'idée principale doit être exprimée clairement au début du paragraphe. Les autres phrases servent à expliquer et à illustrer le message qu'on veut transmettre. Bref, un paragraphe pour chaque idée et une idée par paragraphe.
+	<br>Ici, retour à la ligne, avec l'élément <code>&lt;br&gt;</code>. Espace&nbsp;insécable.</p>
+
+	<p>Second paragraphe. Selon la norme typographique adoptée, la première ligne d'un paragraphe peut être en retrait (alinéa rentrant). Sur un document électronique comportant de nombreux paragraphes courts, on évite parfois ce retrait pour le remplacer par une ligne vierge, détachant mieux les paragraphes et les prêtant ainsi mieux à la lecture rapide.</p>
+
+	<hr>
+
+	<p>Troisième paragraphe, précédé d&#8217;une ligne horizontale de séparation&nbsp;<code>&lt;hr&gt;</code>. La&nbsp;lecture sur écran est fastidieuse et provoque rapidement de la fatigue oculaire. Il&nbsp;est donc recommandé d'aérer le texte&nbsp;: faire des paragraphes courts et sauter une ligne entre chaque.</p>
+
+	<h2>Marquages sémantiques</h2>
+	<!-- Cf. : http://www.la-grange.net/w3c/html4.01/struct/text.html#h-9.2.1 -->
+
+	<dl>
+		<dt><code>&lt;em&gt;</code> et <code>&lt;strong&gt;</code></dt>
+		<!-- Cf. : https://developer.mozilla.org/fr/docs/Web/HTML/Element/em -->
+		<dd>L'élément d'emphase <code>&lt;em&gt;</code> sert à <em>insister</em> sur un texte. L'élément <code>&lt;strong&gt;</code> sert à donner plus d'<strong>importance</strong> à un texte. Exemple&nbsp;: l'italique est moins <em>lisible</em> sur écran, il convient d'en user <strong>avec parcimonie</strong>.</dd>
+
+		<dt><code>&lt;i&gt;</code></dt>
+		<dd>L'élément <code>&lt;i&gt;</code> sert à différencier des mots du texte principal, par exemple des termes techniques, ou des mots dans une langue étrangère, comme les locutions latines non francisées <i lang="la">a&nbsp;priori</i> ou <i lang="la">modus vivendi</i>.</dd>
+
+		<dt><code>&lt;b&gt;</code></dt>
+		<dd>L'élément <code>&lt;b&gt;</code> sert à distinguer un texte, sans lui apporter une importance particulière. Habituellement utilisé pour les <b>mots-clés</b> dans les résumés, les <b>noms de produits</b> dans des tests, ou encore pour la première phrase d'un paragraphe.</dd>
+
+		<dt><code>&lt;abbr&gt;</code> <abbr title="Support incomplet" class="quiet">⚠</abbr> <del>et <code>&lt;acronym&gt;</code> <abbr title="N'existe plus en HTML5" class="quiet">⚠</abbr></del></dt>
+		<dd>L'élément <code>&lt;abbr&gt;</code> représente une abréviation et permet d'en fournir une description complète. Exemple&nbsp;: le <abbr title="Cascading Style Sheets" lang="en">CSS</abbr> sert à habiller la structure <abbr title="HyperText Markup Language" lang="en">HTML</abbr>. L'élément <code>&lt;acronym&gt;</code> représentait une abréviation se prononçant comme un mot normal&nbsp;: y'a-t-il un <acronym title="objet volant non identifié">ovni</acronym> à l'<acronym title="Ouvroir de Littérature Potentielle">OuLiPo</acronym>&nbsp;? Ce dernier ne doit plus être utilisé mais remplacé par <code>&lt;abbr&gt;</code>.</dd>
+
+		<dt><code>&lt;dfn&gt;</code></dt>
+		<dd>L'élément <code>&lt;dfn&gt;</code> marque le terme que définit le texte environnant. Par exemple, le <dfn>courriel</dfn> est le système de courrier électronique qui nous permet d'envoyer des messages à travers le monde.</dd>
+
+		<dt><code>&lt;del&gt;</code> et <code>&lt;ins&gt;</code></dt>
+		<!-- Cf. : http://www.la-grange.net/w3c/html4.01/struct/text.html#h-9.4 -->
+		<dd>Les éléments <code>&lt;del&gt;</code> et <code>&lt;ins&gt;</code> sont utilisés pour marquer les parties d'un document qui ont été <del>supprimées</del> ou <ins>insérées</ins>. Par exemple, un shérif peut employer <del>3</del><ins>5</ins> suppléants.</dd>
+
+		<dt><code>&lt;u&gt;</code> <abbr title="Déprécié en HTML 4 et XHTML, ré-introduit en HTML5" class="quiet">⚠</abbr></dt>
+		<!-- Cf.: https://developer.mozilla.org/fr/docs/Web/HTML/Element/u -->
+		<dd>L'élément <code>&lt;u&gt;</code> permet d'afficher un <u>texte souligné</u>. Il s'utilise de façon exceptionnelle, pour signaler un texte mal <u>ortografié</u> ou un nom propre chinois, par exemple&nbsp;: <u lang="zh">汉代</u>. Le soulignement est réservé aux <a href="#links">hyperliens</a>.</dd>
+
+		<dt><code>&lt;mark&gt;</code></dt>
+		<dd>L'élément <code>&lt;mark&gt;</code> sert à <mark>surligner</mark> certains mots par rapport au contexte, comme les résultats d'une recherche dans le document ou pour attirer l'attention sur certains mots d'une citation. Pour le <span class="mark">même effet visuel</span>, non sémantique, utilisez <code>.mark</code>.</dd>
+
+		<dt><code>&lt;small&gt;</code> <del>et <code>&lt;big&gt;</code> <abbr title="N'existe plus en HTML5" class="quiet">⚠</abbr></del></dt>
+		<!-- Cf.: https://developer.mozilla.org/fr/docs/Web/HTML/Element/small -->
+		<dd>L'élément <code>&lt;small&gt;</code> représente des annotations et des petits caractères comme les <small>mentions légales</small> ou liées au <small>copyright</small>. Comme l'élément <code>&lt;big&gt;</code> ne se limite qu'à de la présentation formelle, il ne doit <big>plus</big> être utilisé, mais remplacé par le sélecteur CSS <code>.big</code>.</dd>
+
+		<dt><code>&lt;sub&gt;</code> et <code>&lt;sup&gt;</code></dt>
+		<!-- Cf.: http://www.la-grange.net/w3c/html4.01/struct/text.html#h-9.2.3 -->
+		<dd>Les éléments <code>&lt;sub&gt;</code> et <code>&lt;sup&gt;</code> marquent les indices et les exposants, par exemple&nbsp;: <abbr>H<sub>2</sub>O</abbr> et E=mc<sup>2</sup>. Ne pas confondre <abbr title="numéro">n<sup>o</sup></abbr> et <abbr title="degré Celsius">°C</abbr>.</dd>
+
+		<dt><code>&lt;time&gt;</code></dt>
+		<dd>L'élément <code>&lt;time&gt;</code> représente une heure ou une date précise du calendrier grégorien et pour les rendre interprétable par un ordinateur. Née le <time datetime="1815-12-10">10 décembre 1815</time> et morte le <time datetime="1852-11-27">27 novembre 1852</time> à Londres, Ada Lovelace est considérée comme <q>le premier programmeur du monde</q>.</dd>
+	</dl>
+
+	<p>Pour obtenir le même effet visuel, non sémantique, utilisez les sélecteurs CSS homonymes&nbsp;: <code>.i</code>, <code>.b</code>, <code>.del</code>, <code>.ins</code>, <code>.small</code>, etc.
+
+	<h3>Autres enrichissements typographiques</h3>
+
+	<p>Les enrichissements typographiques suivants ne sont pas disponibles en HTML natif et donc proposés en&nbsp;CSS par Tiny&nbsp;Typo&nbsp;:</p>
+
+	<ul>
+		<li><code>.caps</code>&nbsp;: <span class="caps">Petites capitales</span></li>
+		<li><code>.quiet</code>&nbsp;: <span class="quiet">Texte discret</span></li>
+	</ul>
+
+	<p>Tailles de texte&nbsp;:</p>
+
+	<ul>
+		<li><code>.smaller</code>&nbsp;: <span class="smaller">smaller</span></li>
+		<li><code>.small</code>&nbsp;: <span class="small">small</span></li>
+		<li>texte de base</li>
+		<li><code>.big</code>&nbsp;: <span class="big">big</span></li>
+		<li><code>.bigger</code>&nbsp;: <span class="bigger">bigger</span></li>
+		<li><code>.biggest</code>&nbsp;: <span class="biggest">biggest</span></li>
+	</ul>
+</section>
+
+
+<section id="links">
+	<h2>Ancres et liens</h2>
+	<!-- Cf.: https://developer.mozilla.org/fr/docs/Web/HTML/Element/a -->
+	<!-- Cf.: http://letrainde13h37.fr/43/signaletique-hyperliens/ -->
+
+	<p>Les hyperliens <code>&lt;a&gt;</code> doivent être visuellement distingués du reste du contenu. Les hyperliens de même nature ont des couleurs, des formes et des comportements identiques sur toutes les pages. Tiny&nbsp;Typo les distingue ainsi&nbsp;:</p>
+
+	<ul>
+		<li><a href="">Lien interne</a></li>
+		<li><code>.external</code>&nbsp;: <a href="" rel="external" class="external">Lien externe</a></li>
+		<li><code>.mailto</code>&nbsp;: <a href="mailto:adresse@courriel.net" title="Écrire à adresse@courriel.net" class="mailto">Ecrivez-nous&nbsp;!</a></li>
+		<li><code>.tel</code>&nbsp;: <a href="tel:+33141592653" class="tel">+33 1 41 59 26 53</a></li>
+		<li><code>.download</code>&nbsp;: <a href="" download class="download">Document à télécharger <small class="ext">(<abbr title="Document PDF">PDF</abbr> &ndash; 215&nbsp;Ko)</small></a></li>
+		<li><code>.audio</code>&nbsp;: <a href="" class="audio">Document audio <small class="ext">(<abbr title="Fichier Ogg">Ogg</abbr> &ndash; 12&nbsp;min)</small></a></li>
+	</ul>
+
+	<p>Lorsqu'elle différe de la page d'origine, la langue de la cible est renseignée dans l'attribut HTML <code>hreflang=""</code>.</p>
+
+	<ul>
+		<li><a href="" hreflang="en">Lien interne</a></li>
+		<li><code>.external</code>&nbsp;: <a href="" rel="external" class="external" hreflang="en">Lien externe</a></li>
+		<li><code>.mailto</code>&nbsp;: <a href="mailto:adresse@courriel.net" title="Écrire à adresse@courriel.net" class="mailto">Ecrivez-nous&nbsp;!</a></li>
+		<li><code>.tel</code>&nbsp;: <a href="tel:+33141592653" class="tel">+33 1 41 59 26 53</a></li>
+		<li><code>.download</code>&nbsp;: <a href="" download class="download" hreflang="en">Document à télécharger <small class="ext">(<abbr title="Document PDF">PDF</abbr> &ndash; 215&nbsp;Ko)</small></a></li>
+		<li><code>.audio</code>&nbsp;: <a href="" class="audio" hreflang="en">Document audio <small class="ext">(<abbr title="Fichier Ogg">Ogg</abbr> &ndash; 12&nbsp;min)</small></a></li>
+	</ul>
+
+	<p>Les <a href="">liens internes</a> et les <a href="http://checklists.opquast.com/11/criteria/687/" title="Bonne pratique Opquast N&#176;188" rel="external" class="external">liens externes</a> sont différenciés. Lorsqu'elle différe de la page d'origine, mieux vaut spécifier la langue de destination&nbsp;: voici la <a href="http://www.w3.org/Translations/WCAG20-fr/" rel="external" class="external">version française</a> des <a href="http://www.w3.org/TR/WCAG20/" title="Web Content Accessibility Guidelines" hreflang="en" rel="external" class="external"><abbr title="Web Content Accessibility Guidelines" lang="en">WCAG</abbr>&nbsp;2.0</a>. Exemple de lien vers un document&nbsp;: <a href="https://data.oqs-cdn.com/checklists/11/Opquast-Quality-Best-practices_V2-2010.pdf" download class="download pdf">Bonnes pratiques Opquast <small class="ext">(<abbr title="Document PDF">PDF</abbr> &ndash; 215&nbsp;Ko)</small></a>. Pour en savoir plus, voir cet article sur la <a href="http://letrainde13h37.fr/43/signaletique-hyperliens/" rel="external" class="external">signalétique des hyperliens</a>.</p>
+
+	<p>Ancre de retour en haut de page&nbsp;: <a href="#top">#top</a></p>
+</section>
+
+
+<section id="heading">
+	<h1>Titre de niveau&nbsp;h1</h1>
+	<p>Chaque page web est identifiée par un titre, unique dans le site. C'est le titre de premier niveau du document. Il est balisé par l'élément HTML <code>&lt;h1&gt;</code>. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+
+	<h2>Titre de niveau&nbsp;h2</h2>
+	<p>Le titre ci-dessus est de niveau&nbsp;2, balise <code>&lt;h2&gt;</code>. Il s'utilise après un élément <code>&lt;h1&gt;</code>, pour marquer un titre de niveau inférieur. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+
+	<h3>Titre de niveau&nbsp;h3</h3>
+	<p>Le titre ci-dessus est de niveau&nbsp;3, balise <code>&lt;h3&gt;</code>. Il s'utilise après un élément <code>&lt;h2&gt;</code>, pour marquer un titre de niveau inférieur. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+
+	<h4>Titre de niveau&nbsp;h4</h4>
+	<p>Le titre ci-dessus est de niveau&nbsp;4, balise <code>&lt;h4&gt;</code>. Il s'utilise après un élément <code>&lt;h3&gt;</code>, pour marquer un titre de niveau inférieur. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+
+	<h5>Titre de niveau&nbsp;h5</h5>
+	<p>Le titre ci-dessus est de niveau&nbsp;5, balise <code>&lt;h5&gt;</code>. Il s'utilise après un élément <code>&lt;h4&gt;</code>, pour marquer un titre de niveau inférieur. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+
+	<h6>Titre de niveau&nbsp;h6</h6>
+	<p>Le titre ci-dessus est de niveau&nbsp;6, balise <code>&lt;h6&gt;</code>. Il s'utilise après un élément <code>&lt;h5&gt;</code>, pour marquer un titre de niveau inférieur. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+
+	<div class="lead">
+		<p>Le chapeau, ici distingué par le sélecteur CSS <code>.lead</code>, est un texte généralement court, précédant le corps d'un article, et dont le but est d'en encourager la lecture, en résumant le propos qui va être développé.</p>
+	</div>
+
+	<h1>Titre&nbsp;1 avec <a href="">lien</a> <small>et small</small></h1>
+	<p>Ci-dessus, titre de niveau&nbsp;1&nbsp;: balise <code>&lt;h1&gt;</code>, avec <code>&lt;a&gt;</code> et <code>&lt;small&gt;</code>.</p>
+
+	<h2>Titre&nbsp;2 avec <a href="">lien</a> <small>et small</small></h2>
+	<p>Ci-dessus, titre de niveau&nbsp;2&nbsp;: balise <code>&lt;h2&gt;</code>, avec <code>&lt;a&gt;</code> et <code>&lt;small&gt;</code>.</p>
+
+	<h3>Titre&nbsp;3 avec <a href="">lien</a> <small>et small</small></h3>
+	<p>Ci-dessus, titre de niveau&nbsp;3&nbsp;: balise <code>&lt;h3&gt;</code>, avec <code>&lt;a&gt;</code> et <code>&lt;small&gt;</code>.</p>
+
+	<h4>Titre&nbsp;4 avec <a href="">lien</a> <small>et small</small></h4>
+	<p>Ci-dessus, titre de niveau&nbsp;4&nbsp;: balise <code>&lt;h4&gt;</code>, avec <code>&lt;a&gt;</code> et <code>&lt;small&gt;</code>.</p>
+
+	<h5>Titre&nbsp;5 avec <a href="">lien</a> <small>et small</small></h5>
+	<p>Ci-dessus, titre de niveau&nbsp;5&nbsp;: balise <code>&lt;h5&gt;</code>, avec <code>&lt;a&gt;</code> et <code>&lt;small&gt;</code>.</p>
+
+	<h6>Titre&nbsp;6 avec <a href="">lien</a> <small>et small</small></h6>
+	<p>Ci-dessus, titre de niveau&nbsp;6&nbsp;: balise <code>&lt;h6&gt;</code>, avec <code>&lt;a&gt;</code> et <code>&lt;small&gt;</code>.</p>
+
+	<hr>
+	<p>Il est possible de styler d'autres éléments HTML comme des titres, avec <code>.h1</code>, <code>.h2</code>, <code>.h3</code>, etc.</p>
+
+	<strong class="h1">Comme&nbsp;h1</strong>
+	<p>Ci-dessus, balise avec sélecteur CSS <code>.h1</code>.</p>
+
+	<strong class="h2">Comme&nbsp;h2</strong>
+	<p>Ci-dessus, balise avec sélecteur CSS <code>.h2</code>.</p>
+
+	<strong class="h3">Comme&nbsp;h3</strong>
+	<p>Ci-dessus, balise avec sélecteur CSS <code>.h3</code>.</p>
+
+	<strong class="h4">Comme&nbsp;h4</strong>
+	<p>Ci-dessus, balise avec sélecteur CSS <code>.h4</code>.</p>
+
+	<strong class="h5">Comme&nbsp;h5</strong>
+	<p>Ci-dessus, balise avec sélecteur CSS <code>.h5</code>.</p>
+
+	<strong class="h6">Comme&nbsp;h6</strong>
+	<p>Ci-dessus, balise avec sélecteur CSS <code>.h6</code>.</p>
+</section>
+
+
+<section id="lists">
+	<h2>Listes</h2>
+
+	<div class="half">
+		<p>Liste, avec <code>&lt;ul&gt;</code>&nbsp;:</p>
+		<ul>
+			<li>Rouge tomate, chaud et&nbsp;dynamisant</li>
+			<li>Vert sapin, naturel et&nbsp;équilibrant</li>
+			<li>Bleu océan, profond et&nbsp;reposant</li>
+			<li>Jaune soleil, vif et&nbsp;réjouissant</li>
+		</ul>
+	</div>
+	<div class="half">
+		<p>Énumération, avec <code>&lt;ol&gt;</code>&nbsp;:</p>
+		<ol>
+			<li>Rouge tomate, chaud et&nbsp;dynamisant</li>
+			<li>Vert sapin, naturel et&nbsp;équilibrant</li>
+			<li>Bleu océan, profond et&nbsp;reposant</li>
+			<li>Jaune soleil, vif et&nbsp;réjouissant</li>
+		</ol>
+	</div>
+
+	<p>Liste de définitions avec <code>&lt;dl&gt;</code>, <code>&lt;dd&gt;</code>, <code>&lt;dt&gt;</code>&nbsp;:</p>
+
+	<dl>
+		<dt>Internet</dt>
+		<dd>Réseau informatique internationnal qui connecte les ordinateurs entre eux, tout comme le réseau routier relie les villes entre elles. Ce réseau propose trois types de services fondamentaux&nbsp;: le courriel, le Web et l'échange de fichiers.</dd>
+		<dt>Web</dt>
+		<dd>Le <i lang="en">World Wide Web</i> est le système hypertexte permettant de visiter des pages sur le réseau Internet.</dd>
+	</dl>
+
+	<h3>Listes hétérogènes</h3>
+
+	<div class="half">
+		<ul>
+			<li>Rouge</li>
+			<li>Orange
+				<ul>
+					<li>Dans la nature
+						<ul>
+							<li>Courges
+								<ul>
+									<li>Citrouille</li>
+									<li>Potiron</li>
+								</ul>
+							</li>
+							<li>Carotte</li>
+							<li>Abricot</li>
+						</ul>
+					</li>
+					<li>Objets frabriqués
+						<ul>
+							<li>Mimolette</li>
+							<li>Feu clignotant</li>
+							<li>Robe des moines boudhistes</li>
+						</ul>
+					</li>
+				</ul>
+			</li>
+			<li>Jaune</li>
+			<li>Vert</li>
+			<li>Bleu</li>
+			<li>Indigo</li>
+			<li>Violet</li>
+		</ul>
+	</div>
+
+	<div class="half">
+		<ol>
+			<li>Premier item</li>
+			<li>Deuxième item</li>
+			<li>Troisième item</li>
+			<li>Quatrième item</li>
+			<li>Cinquième item
+				<ol>
+					<li>Premier</li>
+					<li>Deuxième
+						<ol>
+							<li>Premier</li>
+							<li>Deuxième
+								<ol>
+									<li>Premier</li>
+									<li>Deuxième</li>
+									<li>Troisième</li>
+								</ol>
+							</li>
+							<li>Troisième</li>
+						</ol>
+					</li>
+					<li>Troisième</li>
+				</ol>
+			</li>
+			<li>Sixième item</li>
+			<li>Septième item</li>
+		</ol>
+	</div>
+
+	<br class="clear">
+
+	<ul class=clearfix>
+		<li>Exemple de liste ordinaire</li>
+		<li>les éléments d’une liste dans une phrase commencent par une minuscule et se terminent par une virgule, sauf le dernier élément qui, s’il termine la phrase, prend un point
+			<ol>
+				<li>Exemple d'énumération</li>
+				<li>Avec du texte long, pouvant s'écouler sur plusieurs lignes. Les éléments d’une liste formée de plusieurs phrases se comportent comme des alinéas (majuscule en début, point à la ﬁn).
+					<ul>
+						<li>Troisième niveau
+							<ul>
+								<li>Chat
+									<ol>
+										<li>Felix</li>
+										<li>Kiki la Doucette</li>
+									</ol>
+								</li>
+								<li>Chien</li>
+								<li>Perruche</li>
+							</ul>
+						</li>
+						<li>Troisième niveau</li>
+						<li>Troisième niveau</li>
+					</ul>
+				</li>
+			</ol>
+		</li>
+	</ul>
+
+	<dl>
+		<dt>Internet</dt>
+		<dd>
+			<p>Réseau informatique internationnal qui connecte les ordinateurs entre eux, tout comme le réseau routier relie les villes entre elles. Ce réseau propose trois types de services fondamentaux&nbsp;:</p>
+			<ul>
+				<li>le courriel,</li>
+				<li>le Web</li>
+				<li>et l'échange de fichiers.</li>
+			</ul>
+		</dd>
+		<dt>Web</dt>
+		<dd>Le <i lang="en">World Wide Web</i> est le système hypertexte permettant de visiter des pages sur le réseau Internet.</dd>
+	</dl>
+
+	<h3>Effets de style</h3>
+
+	<p>Avec Tiny&nbsp;Typo, il est possible de varier le style des listes avec les sélecteurs CSS <code>.list-none</code>, <code>.list-square</code>, <code>.list-disc</code>, <code>.list-circle</code> ou <code>.list-decimal</code>&nbsp;:</p>
+
+	<div class="half">
+
+		<ul class="list-none">
+			<li>Rouge tomate, chaud et&nbsp;dynamisant</li>
+			<li>Vert sapin, naturel et&nbsp;équilibrant</li>
+			<li>Bleu océan, profond et&nbsp;reposant</li>
+			<li>Jaune soleil, vif et&nbsp;réjouissant</li>
+		</ul>
+
+		<ul class="list-square">
+			<li>Rouge tomate, chaud et&nbsp;dynamisant</li>
+			<li>Vert sapin, naturel et&nbsp;équilibrant</li>
+			<li>Bleu océan, profond et&nbsp;reposant</li>
+			<li>Jaune soleil, vif et&nbsp;réjouissant</li>
+		</ul>
+
+		<ul class="list-disc">
+			<li>Rouge tomate, chaud et&nbsp;dynamisant</li>
+			<li>Vert sapin, naturel et&nbsp;équilibrant</li>
+			<li>Bleu océan, profond et&nbsp;reposant</li>
+			<li>Jaune soleil, vif et&nbsp;réjouissant</li>
+		</ul>
+
+		<ul class="list-circle">
+			<li>Rouge tomate, chaud et&nbsp;dynamisant</li>
+			<li>Vert sapin, naturel et&nbsp;équilibrant</li>
+			<li>Bleu océan, profond et&nbsp;reposant</li>
+			<li>Jaune soleil, vif et&nbsp;réjouissant</li>
+		</ul>
+
+	</div>
+	<div class="half">
+
+		<ul class="list-decimal">
+			<li>Rouge tomate, chaud et&nbsp;dynamisant</li>
+			<li>Vert sapin, naturel et&nbsp;équilibrant</li>
+			<li>Bleu océan, profond et&nbsp;reposant</li>
+			<li>Jaune soleil, vif et&nbsp;réjouissant</li>
+		</ul>
+
+		<ul class="list-none">
+			<li>Lorem ipsum dolor sit amet</li>
+			<li>Consectetuer adipiscing elit
+				<ul class="list-circle">
+					<li>Lorem ipsum dolor sit amet</li>
+					<li>Consectetuer adipiscing elit
+						<ol>
+							<li>Rouge tomate, chaud et&nbsp;dynamisant</li>
+							<li>Vert sapin, naturel et&nbsp;équilibrant</li>
+							<li>Bleu océan, profond et&nbsp;reposant</li>
+							<li>Jaune soleil, vif et&nbsp;réjouissant</li>
+						</ol>
+					</li>
+					<li>Nam egestas, neque ac semper dictum</li>
+					<li>Jaune soleil, vif et&nbsp;réjouissant</li>
+				</ul>
+			</li>
+			<li>Nam egestas, neque ac semper dictum</li>
+			<li>Leo ante hendrerit ante</li>
+		</ul>
+	</div>
+	<br class="clear">
+
+	<h3>Listes horizontales</h3>
+
+	<p>Il est possible d'afficher une liste à l'horizontale avec <code>.list-inline</code>&nbsp;:</p>
+
+	<ul class="list-inline">
+		<li>Rouge tomate, chaud et&nbsp;dynamisant</li>
+		<li>Vert sapin, naturel et&nbsp;équilibrant</li>
+		<li>Bleu océan, profond et&nbsp;reposant</li>
+		<li>Jaune soleil, vif et&nbsp;réjouissant</li>
+	</ul>
+
+	<p>Chaque liste horizontale peut être complétée avec <code>.list-inline-sep</code>, <code>.list-inline-dash</code> ou <code>.list-inline-comma</code>&nbsp;:</p>
+
+	<ul class="list-inline list-inline-sep">
+		<li>Rouge tomate, chaud et&nbsp;dynamisant</li>
+		<li>Vert sapin, naturel et&nbsp;équilibrant</li>
+		<li>Bleu océan, profond et&nbsp;reposant</li>
+		<li>Jaune soleil, vif et&nbsp;réjouissant</li>
+	</ul>
+
+	<ul class="list-inline list-inline-dash">
+		<li>Rouge tomate, chaud et&nbsp;dynamisant</li>
+		<li>Vert sapin, naturel et&nbsp;équilibrant</li>
+		<li>Bleu océan, profond et&nbsp;reposant</li>
+		<li>Jaune soleil, vif et&nbsp;réjouissant</li>
+	</ul>
+
+	<ul class="list-inline list-inline-comma">
+		<li>Rouge tomate, chaud et&nbsp;dynamisant</li>
+		<li>Vert sapin, naturel et&nbsp;équilibrant</li>
+		<li>Bleu océan, profond et&nbsp;reposant</li>
+		<li>Jaune soleil, vif et&nbsp;réjouissant</li>
+	</ul>
+
+	<ul>
+		<li>Lorem ipsum dolor sit amet</li>
+		<li>
+		Consectetuer adipiscing elit
+			<ul class="list-inline list-inline-comma">
+				<li><a href="">Rouge tomate, chaud et&nbsp;dynamisant</a></li>
+				<li><a href="">Vert sapin, naturel et&nbsp;équilibrant</a></li>
+				<li><a href="">Bleu océan, profond et&nbsp;reposant</a></li>
+				<li><a href="">Jaune soleil, vif et&nbsp;réjouissant</a></li>
+			</ul>
+		</li>
+		<li>Nam egestas, neque ac semper dictum</li>
+		<li>Leo ante hendrerit ante</li>
+	</ul>
+
+	<nav>
+		<ul class="list-inline list-inline-sep">
+			<li><a href="">Rouge tomate, chaud et&nbsp;dynamisant</a></li>
+			<li><a href="">Vert sapin, naturel et&nbsp;équilibrant</a></li>
+			<li><a href="">Bleu océan, profond et&nbsp;reposant</a></li>
+			<li><a href="">Jaune soleil, vif et&nbsp;réjouissant</a></li>
+		</ul>
+	</nav>
+</section>
+
+
+<section id="tables">
+	<h2>Tableaux de données</h2>
+	<!-- Cf. : https://developer.mozilla.org/fr/docs/Web/HTML/Element/table -->
+
+	<p>Autrefois employé pour mettre en page, l'élément HTML <code>&lt;table&gt;</code> n'est pas stylé par défaut. Utilisez systématiquement le sélecteur CSS <code>.table</code> et les éléments associés —&nbsp;<code>&lt;tbody&gt;</code>, <code>&lt;thead&gt;</code>, <code>&lt;tr&gt;</code>, <code>&lt;td&gt;</code>, <code>&lt;th&gt;</code>&nbsp;— pour baliser les tableaux de données. Indiquez un titre via l'élément <code>&lt;caption&gt;</code>.</p>
+
+	<table class="table">
+		<caption>Titre du tableau</caption>
+		<thead>
+			<tr>
+				<th scope="col">entête</th>
+				<th scope="col">R</th>
+				<th scope="col">V</th>
+				<th scope="col">B</th>
+			</tr>
+		</thead>
+		<tfoot>
+			<tr>
+				<td>footer</td>
+				<td>footer</td>
+				<td>footer</td>
+				<td>footer</td>
+			</tr>
+		</tfoot>
+		<tbody>
+			<tr class="odd">
+				<td>Red</td>
+				<td>255</td>
+				<td>0</td>
+				<td>0</td>
+			</tr>
+			<tr class="even">
+				<td>Green</td>
+				<td>0</td>
+				<td>255</td>
+				<td>0</td>
+			</tr>
+			<tr class="odd">
+				<td>Blue</td>
+				<td>0</td>
+				<td>0</td>
+				<td>255</td>
+			</tr>
+		</tbody>
+	</table>
+
+	<p>Un tableau présente des données, souvent chiffrées. Les tableaux de données doivent être titrés et les cellules reliées à leurs en-têtes.</p>
+
+	<div class="table-responsive">
+	<table class="table">
+		<caption>Tableau à cellules fusionnées</caption>
+		<thead>
+			<tr>
+				<th scope="col"><abbr title="numéro">#</abbr></th>
+				<th scope="col">Fichier</th>
+				<th scope="col">Valeur</th>
+				<th scope="col">Evol</th>
+				<th scope="col"><abbr title="pourcentage">%</abbr></th>
+				<th scope="col">URL</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class="odd">
+				<td rowspan="2">1</td>
+				<td>Lorem ipsum dolor sit amet</td>
+				<td>1.38</td>
+				<td>-0.01</td>
+				<td>-0.36%</td>
+				<td><a href="">URL</a></td>
+			</tr>
+			<tr class="even">
+				<td>Consectetuer adipiscing elit</td>
+				<td>1.15</td>
+				<td>+0.02</td>
+				<td>1.32%</td>
+				<td><a href="">URL</a></td>
+			</tr>
+			<tr class="odd">
+				<td>2</td>
+				<td colspan="2">Nam egestas, neque ac semper dictum</td>
+				<td>-0.04</td>
+				<td>-0.99%</td>
+				<td><a href="" rel="external" class="external">URL</a></td>
+			</tr>
+			<tr class="even">
+				<td>3</td>
+				<td>Leo ante hendrerit ante</td>
+				<td>4.00</td>
+				<td>+0.06</td>
+				<td>2.04%</td>
+				<td><a href="">URL</a></td>
+			</tr>
+		</tbody>
+	</table>
+	</div>
+</section>
+
+
+<section id="quotes">
+	<h2>Citations, code et&nbsp;poésie</h2>
+
+	<h3>Citations</h3>
+	<!-- Cf.: http://romy.tetue.net/361 -->
+
+	<ul>
+		<li><code>&lt;q&gt;</code>&nbsp;: <q>citation au fil du texte</q></li>
+		<li><code>&lt;cite&gt;</code> <abbr title="À réserver aux titres d'ouvrages" class="quiet">⚠</abbr>&nbsp;: <cite>titre d'œuvre</cite></li>
+	</ul>
+
+	<p>Voici une citation ordinaire, avec la balise HTML <code>&lt;blockquote&gt;</code>, où la source est précisée avec <code>&lt;small&gt;</code>&nbsp;:</p>
+	<!-- Cf.: http://romy.tetue.net/1009 -->
+
+	<blockquote>
+		<p>Mettre le Web et ses services à la disposition de tous les individus, quels que soient leur matériel ou logiciel, leur infrastructure réseau, leur langue maternelle, leur culture, leur localisation géographique, ou leurs aptitudes physiques ou mentales.
+		<br><small>Tim Berners-Lee, inventeur du Web.</small></p>
+	</blockquote>
+
+	<p>Voici un exemple de citation au fil du texte (avec la balise HTML <code>&lt;q&gt;</code>), avec changement de langue&nbsp;: <q lang="la" cite="http://fr.wikipedia.org/wiki/Mens_sana_in_corpore_sano">Mens sana in corpore sano</q>, dixième <cite>Satire</cite> de Juvénal. <q lang="ja">頑張ってください</q> s'exclama-t-il alors.<p>
+
+	<blockquote class="text-right" lang="en" cite="http://www.evene.fr/citations/auteur.php?ida=760">
+		<p>Never doubt that a small group of committed people can change&nbsp;the&nbsp;world.
+		<br>Indeed, it is the only thing that&nbsp;ever&nbsp;has.
+		<br><small>Margaret Mead (1901-1978)</small></p>
+	</blockquote>
+
+	<p>Les citations peuvent être imbriquées. Par exemple, le procès-verbal rapporte&nbsp;: <q>La présidente clôtura la dernière réunion de l'année en disant&nbsp;: <q>Je vous dis à tous et toutes&nbsp;: <q lang="en">happy holidays!</q> et <q lang="ar" dir="rtl">أعيادا سعيدة</q> et j'espère vous retrouver en pleine forme à la rentrée</q>.</q><p>
+
+	<h3>Code</h3>
+	<!-- Cf.: http://romy.tetue.net/543 -->
+
+	<p>Plusieurs éléments HTML servent à citer des fragments de code informatique&nbsp;:</p>
+
+	<ul>
+		<li><code>&lt;code&gt;</code>&nbsp;: <code>extrait de code</code></li>
+		<li><code>&lt;kbd&gt;</code>&nbsp;: <kbd>raccourci-clavier</kbd></li>
+		<li><code>&lt;samp&gt;</code>&nbsp;: <samp>extrait de script</samp></li>
+		<li><code>&lt;var&gt;</code>&nbsp;: <var>variable</var></li>
+		<li><code>&lt;tt&gt;</code> <abbr title="À éviter car obsolète" class="quiet">⚠</abbr>&nbsp;: <tt>teletype</tt></li>
+	</ul>
+
+	<p>L'élément <code>&lt;pre&gt;</code> matérialise un bloc de texte pré-formaté, comme du code informatique ou de l'<abbr title="American Standard Code for Information Interchange" lang="en">ASCII</abbr>&nbsp;art&nbsp;:</p>
+
+	<pre>! " # $ % &amp; ' ( ) * + , - . /
+0 1 2 3 4 5 6 7 8 9 : ; &lt; = &gt; ?
+@ A B C D E F G H I J K L M N O
+P Q R S T U V W X Y Z [ \ ] ^ _
+` a b c d e f g h i j k l m n o
+p q r s t u v w x y z { | } ~</pre>
+	<!-- pourquoi pas : http://www.whatwg.org/specs/web-apps/current-work/multipage/elements.html#table-aria-weak -->
+
+	<p>Autre exemple, avec ligne longue&nbsp;:</p>
+
+	<pre>string getContent( int $wordCount [, string $format = html] [, boolean $loremipsum = true] )</pre>
+
+	<h3>Contact</h3>
+
+	<p>Le moyen de contacter les auteur·e·s du document se marque avec <code>&lt;address&gt;</code>, typiquement dans le <code>&lt;footer&gt;</code>&nbsp;:</p>
+	<!-- Cf.: https://developer.mozilla.org/fr/docs/Web/HTML/Element/address -->
+
+	<address>
+		<strong>Romy Têtue</strong>
+		<br>42, rue du Web
+		<br>Planète Terre
+		<br><a href="tel:+33141592653">+33 1 41 59 26 53</a>
+		<br><a href="http://romy.tetue.net" rel="external" class="external">romy.tetue.net</a>
+	</address>
+</section>
+
+
+<section id="boxes">
+	<h2>Alignements et encadrés</h2>
+
+	<p>Avec Tiny&nbsp;Typo, il est possible d'aligner les blocs et de créer des encadrés, par l'ajout de sélecteurs&nbsp;CSS&nbsp;:</p>
+
+	<ul>
+		<li><code>.text-left</code>&nbsp;: ferre le texte à gauche</li>
+		<li><code>.text-right</code>&nbsp;: ferre le texte à droite</li>
+		<li><code>.text-center</code>&nbsp;: centre le texte</li>
+		<li><code>.text-justify</code>&nbsp;: justifie le texte</li>
+		<li><code>.box</code>&nbsp;: encadré</li>
+	</ul>
+
+	<p>Aides au positionnement&nbsp;:</p>
+
+	<ul>
+		<li><code>.left</code>&nbsp;: positionne le bloc à gauche</li>
+		<li><code>.right</code>&nbsp;: positionne le bloc à gauche</li>
+		<li><code>.center</code>&nbsp;: centre le bloc</li>
+		<li><code>.clear</code>&nbsp;: espaceur de blocs flottants</li>
+		<li><code>.clearfix</code>&nbsp;: espaceur de blocs flottants</li>
+		<li><code>.p</code>&nbsp;: marge basse, calée sur la grille</li>
+	</ul>
+
+	<h3>Alignements</h3>
+
+	<div class="text-justify">
+		<p>Texte justifié avec <code>.text-justify</code>. Il est possible de justifier le texte, c'est-à-dire que toutes les lignes d'un paragraphe aient la même longueur. Est-ce intéressant de le faire&nbsp;? D'un point de vue de lisibilité, des études montrent qu'un texte en drapeau est plus accessible à l'œil&nbsp;: l'irrégularité des fins de lignes sert de repère visuel et fatigue moins le lecteur. Pourtant, un alignement justifié donne un résultat esthétique plus agréable et une impression de plus grande régularité.
+	    <br>Lire le conseil sur ergologique.com&nbsp;: <a href="http://www.ergologique.com/conseils/conseils.php?id_tip=818" rel="external" class="external">Le texte se justifie-t-il&nbsp;?</a></p>
+	</div>
+	<div class="text-left">
+		<p>Texte ferré à gauche avec <code>.text-left</code>. Il ne faut pas confondre le terme de justification avec l'expression « justifié » à gauche ou à droite souvent employée à tort à la place de « ferré » à gauche ou à droite. Les textes sont par défaut ferrés à gauche et sont par nature, selon la taille de l'écran, sa définition et la taille de la fenêtre dans laquelle le texte apparaît, d'une justification plus ou moins longue.</p>
+	</div>
+	<div class="text-center">
+		<p>Texte centré avec <code>.text-center</code>. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+	</div>
+	<div class="text-right">
+		<p>Texte ferré à droite avec <code>.text-right</code>. Le terme de «&nbsp;fer&nbsp;» vient de la façon dont le compositeur alignait les lignes sur son composteur en typographie&nbsp;: les lignes étaient alignées sur le «&nbsp;fer&nbsp;» à gauche, sur la partie mobile du composteur, afin de créer un «&nbsp;drapeau&nbsp;» à&nbsp;droite&nbsp;; elles étaient «&nbsp;ferrées&nbsp;» à droite, sur la partie fixe du composteur, afin de créer un «&nbsp;drapeau&nbsp;» à&nbsp;gauche.</p>
+	</div>
+
+	<h3>Encadrés</h3>
+	<!-- Cf. : https://developer.mozilla.org/fr/docs/Web/HTML/Element/aside -->
+
+	<p>Les encadrés, typiquement <code>&lt;aside&gt;</code>, sont caractérisés par le sélecteur CSS <code>.box</code>. Ils&nbsp;peuvent être positionnés avec <code>.left</code>, <code>.right</code> et&nbsp;<code>.center</code>, et ferrés avec les classes précédentes.</p>
+
+	<aside class="box">
+		<p>Encadré par défaut. Nulla facilisi. Integer venenatis, metus eu ultrices consectetur, lacus felis venenatis mi, quis condimentum turpis turpis nec elit. Ut vel est a lorem suscipit aliquam. Cras metus sem, sagittis sit amet <strong>important</strong> viverra quis, consectetur vel <i>italique</i> massa. Proin ante urna, aliquam eu dictum eu, eleifend ut leo. Nullam euismod lobortis nunc, non suscipit odio tristique at <a href="">par là</a>. Mauris dictum, ligula vitae accumsan interdum, leo quam sodales lectus, vel mattis leo lacus quis ante.</p>
+	</aside>
+
+	<p>Maecenas fringilla dignissim venenatis. Donec ut mi a odio sagittis facilisis. Fusce in risus elit. In quam turpis, elementum et elementum rutrum, dictum quis nibh. Morbi iaculis eros in purus pellentesque accumsan pellentesque sem porttitor. Aliquam erat volutpat. Donec vitae luctus neque.</p>
+
+	<aside class="box left text-right">
+		<p>Exemple d'encadré flottant à&nbsp;gauche et ferré à&nbsp;droite. Nulla facilisi. Integer venenatis, metus eu ultrices consectetur, lacus felis venenatis mi, quis condimentum turpis turpis nec elit. Ut vel est a lorem suscipit aliquam. Cras metus sem, sagittis sit amet <strong>important</strong> viverra quis, consectetur vel <i>italique</i> massa.</p>
+	</aside>
+
+	<p>Maecenas fringilla dignissim venenatis. Donec ut mi a odio sagittis facilisis. Fusce in risus elit. In quam turpis, elementum et elementum rutrum, dictum quis nibh. Morbi iaculis eros in purus pellentesque accumsan pellentesque sem porttitor. Aliquam erat volutpat. Donec vitae luctus neque.</p>
+
+	<p>Duis sodales erat et odio imperdiet vitae sodales ligula dapibus. Sed commodo orci a nisi iaculis sit amet mollis ante sagittis. Praesent dapibus ligula eget massa vehicula rhoncus. Vestibulum purus odio, hendrerit nec faucibus vel, commodo eu justo. Sed rhoncus ligula vel velit consectetur pharetra. In pellentesque justo ut libero bibendum sodales. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Maecenas viverra egestas felis, non vestibulum nibh hendrerit sit amet.</p>
+
+	<aside class="box right">
+		<p>Exemple d'encadré flottant à&nbsp;droite. Lorsque l’on trame un fond, c’est bien souvent pour faire ressortir l’information qu’il contient, or on arrive souvent à l’effet inverse, en augmentant la difficulté de lecture on décourage le lecteur. Un fond tramé ne nécessite pas de filet extérieur (encadrement).</p>
+	</aside>
+
+	<p>Mauris lacinia, ante id sodales pretium, eros est gravida sapien, nec auctor dolor massa a dui. Vivamus consequat suscipit elit in imperdiet. In consectetur varius tortor, vel dictum ipsum dignissim vel. Nulla faucibus suscipit ipsum non porttitor. Fusce non ante non mi adipiscing faucibus. Sed odio risus, malesuada eget placerat id, semper eget turpis. Cras ante lorem, pretium ut vestibulum nec, vehicula eget orci.</p>
+
+	<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla vel lectus eget tortor cursus dapibus sit amet imperdiet lacus. Nullam purus ipsum, aliquet eget imperdiet scelerisque, interdum in felis. Maecenas dolor eros, iaculis et pretium ac, eleifend sit amet lacus. Etiam a lacus eget dui aliquet tempor. Duis dapibus magna dictum enim ultrices ac pharetra lacus convallis. Donec felis ipsum, tristique ornare fermentum quis, fringilla nec arcu. Nunc tortor arcu, fermentum in dictum sit amet, aliquam eu ante. Integer volutpat, erat cursus posuere rutrum, erat tellus varius erat, quis tempus eros risus a lacus.</p>
+
+	<aside class="box center">
+		<p>Exemple d'encadré centré. En typographie, un <dfn>filet</dfn> est un trait de taille et de graisse variables qui accompagne les éléments de texte ou les images pour les mettre en valeur et les différencier ou pour créer des tableaux et des encadrés. Il marque aussi la fin d'un chapitre ou sert simplement d'élément décoratif dans la composition. Le filet sert aussi à composer des cadres ou des tableaux.</p>
+	</aside>
+
+	<p>Duis sodales erat et odio imperdiet vitae sodales ligula dapibus. Sed commodo orci a nisi iaculis sit amet mollis ante sagittis. Praesent dapibus ligula eget massa vehicula rhoncus. Vestibulum purus odio, hendrerit nec faucibus vel, commodo eu justo. Sed rhoncus ligula vel velit consectetur pharetra. In pellentesque justo ut libero bibendum sodales. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Maecenas viverra egestas felis, non vestibulum nibh hendrerit sit amet.</p>
+
+	<aside class="box">
+
+		<h4>Exemple d'encadré avec contenu riche</h4>
+		<img src="http://lorempixel.com/200/150/food" alt="" width="200" height="150" class="thumb round border right">
+
+		<blockquote>
+			<p>Si vous utilisez des recettes de cuisine, vous avez probablement fait l'expérience de recevoir la copie d'une recette de la part d'un ami qui la partage avec vous. Et&nbsp;vous avez sans doute fait également l'expérience —&nbsp;à&nbsp;moins d'être un néophyte complet&nbsp;— de changer cette recette. Cette modification, vous la transmettez à d'autres en faisant des copies. Un programme d'ordinateur est comme une recette de cuisine</p>
+			<p><small>Richard Stallman, 2001.</small></p>
+		</blockquote>
+
+		<p>La recette de cuisine est l’exemple pris pour expliquer le <em>logiciel libre</em>. En&nbsp;réalité les recettes sont le plus souvent diffusées de façon privative, <q><abbr title="Copyright">©</abbr>&nbsp;tous droits réservés</q>. Qu’y comprendre ? <a href="http://romy.tetue.net/760" rel="external" class="external">Les recettes de cuisine sont-elles libres&nbsp;?</a></p>
+
+	</aside>
+
+	<p>Proin sit amet fringilla ipsum. Aenean pretium, nibh ac luctus tristique, odio nisi tincidunt tortor, quis dignissim sem nulla non neque. Morbi laoreet, neque nec ultrices volutpat, arcu odio pharetra tellus, sed bibendum mi dolor eget augue. Cras varius, mi ut eleifend convallis, diam leo molestie est, vitae feugiat ipsum mauris at ante. Vestibulum eu sapien metus. Pellentesque tincidunt sodales nibh eu adipiscing. Fusce leo nibh, placerat sed fringilla id, accumsan eget libero. Sed lorem augue, cursus in volutpat in, iaculis ut ante. Suspendisse sed lectus sed arcu fermentum aliquet. Donec elementum, elit non feugiat lobortis, lectus sapien tincidunt nisl, quis commodo leo lectus ut felis. Pellentesque id diam ante.</p>
+</section>
+
+
+<section id="medias">
+	<h2>Medias et albums</h2>
+
+	<p>Les éléments <code>&lt;figure&gt;</code> et <code>&lt;figcaption&gt;</code> fonctionnent ensemble pour associer une légende à une image ou autre média. Ces illustrations peuvent être positionnées avec <code>.left</code>, <code>.right</code> et&nbsp;<code>.center</code>.</p>
+
+	<figure class="center">
+		<img src="http://lorempixel.com/500/300/abstract" alt="" width="500" height="300">
+		<figcaption>La légende est un court texte accompagnant une photo ou un dessin et visant à lui donner un&nbsp;sens. Elle&nbsp;peut se placer avant ou après le media principal.<br>Lire : <a href="http://www.alsacreations.com/article/lire/1337-html5-elements-figure-et-figcaption.html" rel="external" class="external">HTML5&nbsp;: Éléments &lt;figure&gt; et &lt;figcaption&gt;</a></figcaption>
+	</figure>
+
+	<p>Paragraphe précédé d'une image centrée. Praesent egestas turpis ut risus lacinia eu cursus urna dapibus. Donec nibh enim, pulvinar vitae ornare ut, ultrices sit amet neque. Quisque ultrices venenatis mi, id fringilla eros malesuada a. Curabitur sagittis mollis arcu, sit amet scelerisque magna varius ac. Vivamus ullamcorper vulputate ipsum, adipiscing varius leo porttitor a. Curabitur luctus gravida nibh, sit amet auctor metus vulputate quis. Aliquam eu nulla risus. Cras in suscipit odio. Etiam ut nisl ut velit ornare pharetra a sed lacus.</p>
+
+	<figure class="left">
+		<img src="http://lorempixel.com/200/300/abstract" alt="" width="200" height="300">
+		<figcaption>Titre de l'image<br><small class="quiet">&copy; copyright</small></figcaption>
+	</figure>
+
+	<p>Paragraphe précédé d'une image calée à&nbsp;gauche. Mauris lacinia, ante id sodales pretium, eros est gravida sapien, nec auctor dolor massa a dui. Vivamus consequat suscipit elit in imperdiet. In consectetur varius tortor, vel dictum ipsum dignissim vel. Nulla faucibus suscipit ipsum non porttitor. Fusce non ante non mi adipiscing faucibus. Sed odio risus, malesuada eget placerat id, semper eget turpis. Cras ante lorem, pretium ut vestibulum nec, vehicula eget orci.</p>
+
+	<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla vel lectus eget tortor cursus dapibus sit amet imperdiet lacus. Nullam purus ipsum, aliquet eget imperdiet scelerisque, interdum in felis. Maecenas dolor eros, iaculis et pretium ac, eleifend sit amet lacus. Etiam a lacus eget dui aliquet tempor. Duis dapibus magna dictum enim ultrices ac pharetra lacus convallis. Donec felis ipsum, tristique ornare fermentum quis, fringilla nec arcu. Nunc tortor arcu, fermentum in dictum sit amet, aliquam eu ante. Integer volutpat, erat cursus posuere rutrum, erat tellus varius erat, quis tempus eros risus a lacus.</p>
+
+	<figure class="right">
+		<img src="http://lorempixel.com/300/200/abstract" alt="" width="300" height="200">
+		<figcaption>En bonne théorie, aucune photo ne devrait<br>paraître sans sa légende.<br><small class="quiet">&copy; copyright</small></figcaption>
+	</figure>
+
+	<p>Paragraphe précédé d'une image calée à&nbsp;droite. Duis sodales erat et odio imperdiet vitae sodales ligula dapibus. Sed commodo orci a nisi iaculis sit amet mollis ante sagittis. Praesent dapibus ligula eget massa vehicula rhoncus. Vestibulum purus odio, hendrerit nec faucibus vel, commodo eu justo. Sed rhoncus ligula vel velit consectetur pharetra. In pellentesque justo ut libero bibendum sodales. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Maecenas viverra egestas felis, non vestibulum nibh hendrerit sit amet.</p>
+
+	<a id="album"></a>
+	<h3>Album</h3>
+	<p>Il est possible de regrouper plusieurs images pour constituer un album, avec <code>.album</code>.</p>
+
+	<figure class="album">
+		<ul>
+			<li><a href=""><img src="http://lorempixel.com/110/110/transport" alt="" width="110" height="110" class="thumb"></a></li>
+			<li><a href=""><img src="http://lorempixel.com/110/110/nature" alt="" width="110" height="110" class="thumb"></a></li>
+			<li><a href=""><img src="http://lorempixel.com/110/110/animals" alt="" width="110" height="110" class="thumb"></a></li>
+			<li><a href=""><img src="http://lorempixel.com/110/110/city" alt="" width="110" height="110" class="thumb"></a></li>
+			<li><a href=""><img src="http://lorempixel.com/110/110/technics" alt="" width="110" height="110" class="thumb"></a></li>
+			<li><a href=""><img src="http://lorempixel.com/110/110/people" alt="" width="110" height="110" class="thumb"></a></li>
+			<li><a href=""><img src="http://lorempixel.com/110/110/food" alt="" width="110" height="110" class="thumb"></a></li>
+			<li><a href=""><img src="http://lorempixel.com/110/110/cats" alt="" width="110" height="110" class="thumb"></a></li>
+		</ul>
+		<figcaption>Mon album de vacances. Je me suis bien amusée&nbsp;!</figcaption>
+	</figure>
+
+	<p>Proin sit amet fringilla ipsum. Aenean pretium, nibh ac luctus tristique, odio nisi tincidunt tortor, quis dignissim sem nulla non neque. Morbi laoreet, neque nec ultrices volutpat, arcu odio pharetra tellus, sed bibendum mi dolor eget augue. Cras varius, mi ut eleifend convallis, diam leo molestie est, vitae feugiat ipsum mauris at ante. Vestibulum eu sapien metus. Pellentesque tincidunt sodales nibh eu adipiscing. Fusce leo nibh, placerat sed fringilla id, accumsan eget libero. Sed lorem augue, cursus in volutpat in, iaculis ut ante. Suspendisse sed lectus sed arcu fermentum aliquet. Donec elementum, elit non feugiat lobortis, lectus sapien tincidunt nisl, quis commodo leo lectus ut felis. Pellentesque id diam ante.</p>
+
+	<h3>Effets de style</h3>
+
+	<p>Avec Tiny&nbsp;Typo, les images peuvent recevoir des effets de style, avec <code>.shadow</code> et&nbsp;<code>.border</code> et&nbsp;leurs angles peuvent être arrondis avec <code>.round</code> et <code>.circle</code>.<p>
+
+	<img src="http://lorempixel.com/90/90/abstract" alt="" width="90" height="90" class="thumb">
+	<img src="http://lorempixel.com/90/90/abstract" alt="" width="90" height="90" class="thumb shadow">
+	<img src="http://lorempixel.com/90/90/abstract" alt="" width="90" height="90" class="thumb border">
+	<img src="http://lorempixel.com/90/90/abstract" alt="" width="90" height="90" class="thumb border shadow">
+	<br class="clear">
+
+	<img src="http://lorempixel.com/90/90/cats" alt="" width="90" height="90" class="thumb round">
+	<img src="http://lorempixel.com/90/90/cats" alt="" width="90" height="90" class="thumb round shadow">
+	<img src="http://lorempixel.com/90/90/cats" alt="" width="90" height="90" class="thumb round border">
+	<img src="http://lorempixel.com/90/90/cats" alt="" width="90" height="90" class="thumb round border shadow">
+	<br class="clear">
+
+	<img src="http://lorempixel.com/90/90/people" alt="" width="90" height="90" class="thumb circle">
+	<img src="http://lorempixel.com/90/90/people" alt="" width="90" height="90" class="thumb circle shadow">
+	<img src="http://lorempixel.com/90/90/people" alt="" width="90" height="90" class="thumb circle border">
+	<img src="http://lorempixel.com/90/90/people" alt="" width="90" height="90" class="thumb circle border shadow">
+	<br class="clear">
+
+	<a id="thumbnail"></a>
+	<h3>Vignettes</h3>
+
+	<p>Les vignettes sont distinguées par la classe <code>.thumb</code>, par défaut sans effet.</p>
+
+	<p><a href=""><img src="http://lorempixel.com/48/48/abstract" alt="" width="48" height="48" class="thumb shadow">Esque this quidam</a>. Aeternitati se commendari posse per statuas aestimantes eas ardenter adfectant quasi plus praemii de figmentis aereis sensu carentibus adepturi, quam ex conscientia honeste recteque factorum, easque auro curant inbracteari, quod Acilio Glabrioni versus quidam.</p>
+
+	<p><a href=""><img src="http://lorempixel.com/48/48/cats" alt="" width="48" height="48" class="thumb round border right">Esque this quidam</a> avec vignette positionnée avec <code>.right</code>. Aeternitati se commendari posse per statuas aestimantes eas ardenter adfectant quasi plus praemii de figmentis aereis sensu carentibus adepturi, quam ex conscientia honeste recteque factorum, easque auro curant inbracteari, quod Acilio Glabrioni versus quidam.</p>
+
+	<p><a href=""><img src="http://lorempixel.com/48/48/people" alt="" width="48" height="48" class="thumb circle border shadow left">Esque this quidam</a> avec vignette positionnée avec <code>.left</code>. Aeternitati se commendari posse per statuas aestimantes eas ardenter adfectant quasi plus praemii de figmentis aereis sensu carentibus adepturi, quam ex conscientia honeste recteque factorum, easque auro curant inbracteari, quod Acilio Glabrioni versus quidam.</p>
+</section>
+
+<hr>
+
+<section id="download">
+	<h2 class="offscreen">Télécharger</h2>
+	<div class="lead text-center"><a href="https://github.com/tetue/tinytypo/archive/master.zip" class="btn big download">Télécharger Tiny&nbsp;Typo<br><small class="smaller">(.zip - 45&nbsp;Ko)</small></a></p><br></div>
+
+	<div class="box">
+		<h3>Installation</h3>
+		<p>Téléchargez. Déposez le fichier <code>tinytypo.css</code> dans votre répertoire <code>css/</code>. Utilisez Tiny&nbsp;Typo dans vos pages&nbsp;:</p>
+		<pre class="text-center">&lt;link rel="stylesheet" type="text/css" href="css/tinytypo.css"&gt;</pre>
+		<p class="text-right">C'est tout&nbsp;!</p>
+	</div>
+
+	<h3>Page de test</h3>
+	<p>Utilisez la page <a href="tinytypo.html"><code>tinytypo.html</code></a> pour tester votre style. Cette page affiche <strong>tous</strong> les éléments HTML natifs qui servent à rédiger sur le Web, tant HTML5, XHTML que HTML&nbsp;4. Elle permet de prévisualiser les styles appliqués. Pour tester les styles en vigueur dans votre site, utilisez cette page seule — sans aucune des feuilles de style de Tiny&nbsp;Typo, mais avec les vôtres.</p>
+
+	<h3>Usage avancé</h3>
+	<p>Pour que vous puissiez choisir seulement ceux dont vous avez besoin, Tiny&nbsp;Typo est répartie en plusieurs fichiers&nbsp:</p>
+
+	<dl>
+
+		<dt><code>reset.css</code></dt>
+		<dd>Vous pouvez remplacer cette feuille par le reset de votre choix, par exemple <a href="http://necolas.github.io/normalize.css/" rel="external" class="external" hreflang="en">normalize.css</a>.</dd>
+
+		<dt><code>clear.css</code></dt>
+		<dd>Aides à la composition (alignements, espaceurs de blocs). Si vous utilisez un framework CSS, il est fort possible que cette feuille soit inutile.</dd>
+
+		<dt><code>font.css</code></dt>
+		<dd>Cette feuille est vierge. Elle sert à déclarer les polices de caractères que vous souhaitez utiliser.</dd>
+
+		<dt><code>typo.css</code></dt>
+		<dd>Base typographique définissant tous les éléments HTML ainsi que textes alignés, encadrés, etc. C'est la feuille principale de Tiny&nbsp;Typo.</dd>
+
+		<dt><code>links.css</code></dt>
+		<dd>Base signalétique des hyperliens.</dd>
+
+		<dt><code>media.css</code></dt>
+		<dd>Styles pour les médias, figures et albums.</dd>
+
+		<dt><code>custom.css</code></dt>
+		<dd>Cette feuille est vierge : elle est destinée à accueillir vos propres styles.</dd>
+
+	</dl>
+
+	<h3>Variables LESS</h3>
+	<p>Tiny&nbsp;Typo est paramétrable. Si vous souhaitez personnaliser davantage, redéfinissez ces variables <a href="http://lesscss.org" rel="external" class="external" hreflang="en">LESS</a> (dans <code>var.less</code>)&nbsp;:</p>
+
+	<table class="table" id="var">
+		<caption>Variables LESS</caption>
+		<thead>
+			<tr>
+				<th> </th>
+				<th>Variable</th>
+				<th>Usage</th>
+				<th>Valeur par défaut</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<th rowspan="4" class="text-right">Couleurs</th>
+				<td><code>@color-bg</code></td>
+				<td>Couleur du fond</td>
+				<td><var>#f8f8f8</var></td>
+			</tr>
+			<tr>
+				<td><code>@color-txt</code></td>
+				<td>Couleur du texte</td>
+				<td><var>#222</var></td>
+			</tr>
+			<tr>
+				<td><code>@color-mid</code></td>
+				<td>Couleur pour gris moyen et filets</td>
+				<td><var>#666</var></td>
+			</tr>
+			<tr>
+				<td><code>@color</code></td>
+				<td>Couleur principale du&nbsp;thème</td>
+				<td><var>#900</var></td>
+			</tr>
+			<tr>
+				<th rowspan="4" class="text-right">Fonts</th>
+				<td><code>@font1</code></td>
+				<td>Corps de texte principal</td>
+				<td><code>serif</code></td>
+			</tr>
+			<tr>
+				<td><code>@font2</code></td>
+				<td>Titraille</td>
+				<td><code>sans-serif</code></td>
+			</tr>
+			<tr>
+				<td><code>@font3</code></td>
+				<td>Code</td>
+				<td><code>monospace</code></td>
+			</tr>
+			<tr>
+				<td><code>@font4</code></td>
+				<td>Alternative, fantaisie (facultative)</td>
+				<td><code>fantasy</code></td>
+			</tr>
+			<tr>
+				<th rowspan="4" class="text-right">Typo</th>
+				<td><code>@font-size</code></td>
+				<td>Taille de texte de&nbsp;base</td>
+				<td><var>1em</var></td>
+			</tr>
+			<tr>
+				<td><code>@line-height</code></td>
+				<td>Interligne</td>
+				<td><var>1.5</var></td>
+			</tr>
+			<tr>
+				<td><code>@p</code></td>
+				<td>Marge basse des paragraphes</td>
+				<td><var>@line-height</var></td>
+			</tr>
+			<tr>
+				<td><code>@alinea</code></td>
+				<td>Alinea</td>
+				<td><var>@line-height</var></td>
+			</tr>
+			<tr>
+				<th rowspan="2" class="text-right">Liens</th>
+				<td><code>@color-link</code></td>
+				<td>Couleur des liens</td>
+				<td><var>@color-txt</var></td>
+			</tr>
+			<tr>
+				<td><code>@color-link-hover</code></td>
+				<td>Couleur des liens survolés</td>
+				<td><var>darken(@color-link, 15%)</var></td>
+			</tr>
+		</tbody>
+	</table>
+
+	<h3>Développement</h3>
+
+	<p>Tiny&nbsp;Typo est développée avec amour par <a href="http://romy.tetue.net" class="external">Romy Duhem-Verdière</a>, sur&nbsp;<a href="https://github.com/tetue/tinytypo" hreflang="en" class="external">Github</a>, et distribuée sous <a href="LICENSE" hreflang="en">licence&nbsp;MIT</a>.</p>
+</section>
+
+</main>
+<footer role="contentinfo">
+	<hr>
+	<p><small>&copy; 2010-2013 Tiny&nbsp;Typo&nbsp;v1.0 | <a href="http://tinytypo.tetue.net">tinytypo.tetue.net</a></small></p>
+</footer>
+</div><!--.page-->
+</body>
+</html>
