@@ -1,0 +1,228 @@
+<!doctype html>
+<html dir="ltr" lang="fr">
+<head>
+<meta charset="utf-8">
+<title>Tiny Typo</title>
+<meta name="description" content="Base CSS pour la typo web">
+<meta name="author" content="romy.tetue.net">
+<meta name="robots" content="none">
+
+<meta name="viewport" content="width=device-width">
+
+<link rel="stylesheet" type="text/css" href="css/reset.css">
+<link rel="stylesheet" type="text/css" href="css/tinytypo.css">
+
+<style>
+body { text-align: center; }
+.page { width: 50%; max-width: 700px; margin: 1em auto; text-align: left; }
+@media ( max-width: 940px) { .page { width: 80%; } }
+@media ( max-width: 400px) { .page { width: auto; margin: 1em 10px; } }
+</style>
+
+</head>
+<body>
+<div class="page">
+<main role="main">
+
+<h1>Tiny Typo</h1>
+
+<div class="lead">
+<p>Cette page présente un échantillon des éléments HTML natifs, pour tester les enrichissements typographiques possibles d'un document web <i>a&nbsp;minima</i>.</p>
+</div>
+
+
+<h2>Paragraphes</h2>
+<p>Tout paragraphe est marqué par l'élément HTML <code>&lt;p&gt;</code>. L'idée principale doit être exprimée clairement au début du paragraphe. Les autres phrases servent à expliquer et à illustrer le message qu'on veut transmettre. Bref, un paragraphe pour chaque idée et une idée par paragraphe.
+<br>Ici, retour à la ligne, avec l'élément <code>&lt;br&gt;</code>. Espace&nbsp;insécable.</p>
+
+<p>Second paragraphe. Selon la norme typographique adoptée, la première ligne d'un paragraphe peut être en retrait (alinéa rentrant). Sur un document électronique comportant de nombreux paragraphes courts, on évite parfois ce retrait pour le remplacer par une ligne vierge, détachant mieux les paragraphes et les prêtant ainsi mieux à la lecture rapide.</p>
+
+<hr>
+
+<p>Troisième paragraphe, précédé d&#8217;une ligne horizontale de séparation <code>&lt;hr&gt;</code>. La lecture sur écran est fastidieuse et provoque rapidement de la fatigue oculaire. Il&nbsp;est donc recommandé d'aérer le texte&nbsp;: faire des paragraphes courts et sauter une ligne entre chaque.</p>
+
+<h2>Marquages sémantiques</h2>
+
+<ul>
+	<li><code>&lt;i&gt;</code>&nbsp;: <i>italique</i></li>
+	<li><code>&lt;b&gt;</code>&nbsp;: <b>gras</b></li>
+	<li><code>&lt;em&gt;</code>&nbsp;: <em>texte important</em></li>
+	<li><code>&lt;strong&gt;</code>&nbsp;: <strong>texte plus important</strong></li>
+	<li><code>&lt;abbr&gt;</code> <abbr title="Support incomplet" class="quiet">⚠</abbr>&nbsp;: <abbr title="HyperText Markup Language" lang="en">HTML</abbr></li>
+	<li><code>&lt;acronym&gt;</code> <abbr title="N'existe plus en HTML5" class="quiet">⚠</abbr>&nbsp;: <acronym title="United Nations Educational, Scientific and Cultural Organization" lang="en">Unesco</acronym></li>
+	<li><code>&lt;dfn&gt;</code>&nbsp;: <dfn>terme défini</dfn></li>
+	<li><code>&lt;del&gt;</code>&nbsp;: <del>texte supprimé</del></li>
+	<li><code>&lt;ins&gt;</code>&nbsp;: <ins>texte inséré</ins></li>
+	<li><code>&lt;mark&gt;</code>&nbsp;: <mark>résultat d'une requête</mark></li>
+	<li><code>&lt;small&gt;</code>&nbsp;: <small>petit texte</small></li>
+	<li><code>&lt;big&gt;</code> <abbr title="N'existe plus en HTML5" class="quiet">⚠</abbr>&nbsp;: <big>gros texte</big></li>
+	<li><code>&lt;sup&gt;</code>&nbsp;: exposant&nbsp;: n<sup>o</sup></li>
+	<li><code>&lt;sub&gt;</code>&nbsp;: indice&nbsp;: <abbr>H<sub>2</sub>O</abbr></li>
+	<li><code>&lt;time&gt;</code>&nbsp;: <time datetime="1972-08-08">8 août 1972</time></li>
+</ul>
+
+<h2>Hyperliens</h2>
+<p>Les hyperliens <code>&lt;a href=""&gt;</code> doivent être visuellement distingués du reste du contenu.</p>
+
+<ul>
+	<li><a href="">Lien interne</a></li>
+	<li><code>.external</code>&nbsp;: <a href="" rel="external" class="external">Lien externe</a></li>
+	<li><code>.mailto</code>&nbsp;: <a href="mailto:adresse@courriel.net" title="Écrire à adresse@courriel.net" class="mailto">Ecrivez-nous&nbsp;!</a></li>
+	<li><code>.tel</code>&nbsp;: <a href="tel:+33141592653" class="tel">+33 1 41 59 26 53</a></li>
+	<li><code>.download</code>&nbsp;: <a href="" download class="download">Document à télécharger <small class="ext">(<abbr title="Document PDF">PDF</abbr> &ndash; 215&nbsp;Ko)</small></a></li>
+	<li><code>.audio</code>&nbsp;: <a href="" class="audio">Document audio <small class="ext">(<abbr title="Fichier Ogg">Ogg</abbr> &ndash; 12&nbsp;min)</small></a></li>
+</ul>
+
+<p>Ancre de retour en haut de page&nbsp;: <a href="#top">#top</a></p>
+
+<h2>Titre de niveau&nbsp;h2</h2>
+<p>Chaque page web est identifiée par un titre, unique dans le site. C'est le titre de premier niveau du document. Il est balisé par l'élément HTML <code>&lt;h1&gt;</code>. Le niveau de titre qui lui succéde dans la page est <code>&lt;h2&gt;</code>, comme ci-dessus.</p>
+
+<h3>Titre de niveau&nbsp;h3</h3>
+<p>Le titre ci-dessus est de niveau&nbsp;3, balise <code>&lt;h3&gt;</code>. Il s'utilise après un élément <code>&lt;h2&gt;</code>, pour marquer un titre de niveau inférieur. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+
+<h4>Titre de niveau&nbsp;h4</h4>
+<p>Le titre ci-dessus est de niveau&nbsp;4, balise <code>&lt;h4&gt;</code>. Il s'utilise après un élément <code>&lt;h3&gt;</code>, pour marquer un titre de niveau inférieur. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+
+<h5>Titre de niveau&nbsp;h5</h5>
+<p>Le titre ci-dessus est de niveau&nbsp;5, balise <code>&lt;h5&gt;</code>. Il s'utilise après un élément <code>&lt;h4&gt;</code>, pour marquer un titre de niveau inférieur. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+
+<h6>Titre de niveau&nbsp;h6</h6>
+<p>Le titre ci-dessus est de niveau&nbsp;6, balise <code>&lt;h6&gt;</code>. Il s'utilise après un élément <code>&lt;h5&gt;</code>, pour marquer un titre de niveau inférieur. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+
+<h2>Listes</h2>
+
+<p>Liste, avec <code>&lt;ul&gt;</code>&nbsp;:</p>
+<ul>
+	<li>Rouge tomate, chaud et&nbsp;dynamisant</li>
+	<li>Vert sapin, naturel et&nbsp;équilibrant</li>
+	<li>Bleu océan, profond et&nbsp;reposant</li>
+	<li>Jaune soleil, vif et&nbsp;réjouissant</li>
+</ul>
+
+<p>Énumération, avec <code>&lt;ol&gt;</code>&nbsp;:</p>
+<ol>
+	<li>Rouge tomate, chaud et&nbsp;dynamisant</li>
+	<li>Vert sapin, naturel et&nbsp;équilibrant</li>
+	<li>Bleu océan, profond et&nbsp;reposant</li>
+	<li>Jaune soleil, vif et&nbsp;réjouissant</li>
+</ol>
+
+<p>Liste de définitions avec <code>&lt;dl&gt;</code>, <code>&lt;dd&gt;</code>, <code>&lt;dt&gt;</code>&nbsp;:</p>
+
+<dl>
+	<dt>Internet</dt>
+	<dd>Réseau informatique internationnal qui connecte les ordinateurs entre eux, tout comme le réseau routier relie les villes entre elles. Ce réseau propose trois types de services fondamentaux&nbsp;: le courriel, le Web et l'échange de fichiers.</dd>
+	<dt>Web</dt>
+	<dd>Le <i lang="en">World Wide Web</i> est le système hypertexte permettant de visiter des pages sur le réseau Internet.</dd>
+</dl>
+
+
+<h2>Tableaux de données</h2>
+<p>Un tableau présente des données, souvent chiffrées. Les tableaux de données doivent être titrés et les cellules reliées à leurs en-têtes.</p>
+
+<table class="table">
+	<caption>Titre du tableau</caption>
+	<thead>
+		<tr>
+			<th scope="col">entête</th>
+			<th scope="col">R</th>
+			<th scope="col">V</th>
+			<th scope="col">B</th>
+		</tr>
+	</thead>
+	<tfoot>
+		<tr>
+			<td>footer</td>
+			<td>footer</td>
+			<td>footer</td>
+			<td>footer</td>
+		</tr>
+	</tfoot>
+	<tbody>
+		<tr class="odd">
+			<td>Red</td>
+			<td>255</td>
+			<td>0</td>
+			<td>0</td>
+		</tr>
+		<tr class="even">
+			<td>Green</td>
+			<td>0</td>
+			<td>255</td>
+			<td>0</td>
+		</tr>
+		<tr class="odd">
+			<td>Blue</td>
+			<td>0</td>
+			<td>0</td>
+			<td>255</td>
+		</tr>
+	</tbody>
+</table>
+
+<p>Utilisez systématiquement le sélecteur CSS <code>.table</code> et les éléments associés —&nbsp;<code>&lt;tbody&gt;</code>, <code>&lt;thead&gt;</code>, <code>&lt;tr&gt;</code>, <code>&lt;td&gt;</code>, <code>&lt;th&gt;</code>&nbsp;— pour baliser les tableaux de données. Indiquez un titre via l'élément <code>&lt;caption&gt;</code>.</p>
+
+
+<h2>Illustation</h2>
+
+<p>Les éléments <code>&lt;figure&gt;</code> et <code>&lt;figcaption&gt;</code> fonctionnent ensemble pour associer une légende à une image ou un autre élément média.</p>
+
+<figure class="center">
+	<img src="http://lorempixel.com/500/300/abstract" alt="" width="500" height="300">
+	<figcaption>La légende est un court texte accompagnant une photo ou un dessin et visant à lui donner un&nbsp;sens. Elle&nbsp;peut se placer avant ou après le media principal.<br>Lire : <a href="http://www.alsacreations.com/article/lire/1337-html5-elements-figure-et-figcaption.html" rel="external" class="external">HTML5&nbsp;: Éléments &lt;figure&gt; et &lt;figcaption&gt;</a></figcaption>
+</figure>
+
+
+<h2>Citations, code et poésie</h2>
+<p>Voici un exemple de citation au fil du texte (avec la balise HTML <code>&lt;q&gt;</code>), avec changement de langue&nbsp;: <q lang="la" cite="http://fr.wikipedia.org/wiki/Mens_sana_in_corpore_sano">Mens sana in corpore sano</q>, dixième <cite>Satire</cite> de Juvénal. <q lang="ja">頑張ってください</q> s'exclama-t-il alors.<p>
+
+<blockquote>
+	<p>Mettre le Web et ses services à la disposition de tous les individus, quels que soient leur matériel ou logiciel, leur infrastructure réseau, leur langue maternelle, leur culture, leur localisation géographique, ou leurs aptitudes physiques ou mentales.
+	<br><small>Tim Berners-Lee, inventeur du Web.</small></p>
+</blockquote>
+
+<h3>Code</h3>
+
+<ul>
+	<li><code>&lt;code&gt;</code>&nbsp;: <code>extrait de code</code></li>
+	<li><code>&lt;kbd&gt;</code>&nbsp;: <kbd>raccourci-clavier</kbd></li>
+	<li><code>&lt;samp&gt;</code>&nbsp;: <samp>extrait de script</samp></li>
+	<li><code>&lt;var&gt;</code>&nbsp;: <var>variable</var></li>
+	<li><code>&lt;tt&gt;</code> <abbr title="À éviter car déprécié en XHTML et HTML5" class="quiet">⚠</abbr>&nbsp;: <tt>teletype</tt></li>
+</ul>
+
+<p>Bloc de texte pré-formaté avec <code>&lt;pre&gt;</code>&nbsp;:</p>
+
+<pre>! " # $ % &amp; ' ( ) * + , - . /
+0 1 2 3 4 5 6 7 8 9 : ; &lt; = &gt; ?
+@ A B C D E F G H I J K L M N O
+P Q R S T U V W X Y Z [ \ ] ^ _
+` a b c d e f g h i j k l m n o
+p q r s t u v w x y z { | } ~</pre>
+
+<h3>Contact</h3>
+
+<p>Contact du document avec <code>&lt;address&gt;</code>&nbsp;:</p>
+
+<address>
+	<strong>Romy Têtue</strong>
+	<br>42, rue du Web
+	<br>Planète Terre
+	<br><a href="tel:+33141592653">+33 1 41 59 26 53</a>
+	<br><a href="http://romy.tetue.net" rel="external" class="external">romy.tetue.net</a>
+</address>
+
+
+<h2>agh! iIl1 0O</h2>
+
+<p>Portez ce vieux whisky au juge blond qui fume sur son île intérieure, à côté de l&#8217;alcôve ovoïde, où les bûches se consument dans l&#8217;âtre, ce qui lui permet de penser à la cænogénèse de l&#8217;être dont il est question dans la cause ambiguë entendue à Moÿ, dans un capharnaüm qui, pense-t-il, diminue çà et là la qualité de son œuvre.</p>
+
+</main>
+<footer role="contentinfo">
+	<hr>
+	<p><small>&copy; 2010-2013 Tiny&nbsp;Typo&nbsp;v1.0 | <a href="http://tinytypo.tetue.net">tinytypo.tetue.net</a></small></p>
+</footer>
+</div><!--.page-->
+</body>
+</html>
