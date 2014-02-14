@@ -5,4 +5,4 @@ Tiny Typo est une base CSS pour le contenu éditorial web. Elle fait le minimum 
 
 Demo : [tinytypo.tetue.net](http://tinytypo.tetue.net)  
 Pour en savoir plus : [Pourquoi Tiny Typo ?](http://romy.tetue.net/pourquoi-tiny-typo)  
-Contact : [courriel](http://romy.tetue.net/contact) ou [#tinytypo](irc://irc.freenode.net/tinytypo)
+Contact : [courriel](http://romy.tetue.net/contact) ou [#tetue](irc://irc.freenode.net/tetue)
