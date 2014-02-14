@@ -99,7 +99,7 @@
 		<dd>L'élément <code>&lt;time&gt;</code> représente une heure ou une date précise du calendrier grégorien et pour les rendre interprétables par un ordinateur. Née le <time datetime="1815-12-10">10 décembre 1815</time> et morte le <time datetime="1852-11-27">27 novembre 1852</time> à Londres, Ada Lovelace est considérée comme <q>le premier programmeur du monde</q>.</dd>
 	</dl>
 
-	<p>Pour obtenir le même effet visuel, non sémantique, utilisez les sélecteurs CSS homonymes&nbsp;: <code>.i</code>, <code>.b</code>, <code>.del</code>, <code>.ins</code>, <code>.small</code>, etc.
+	<p>Pour obtenir le même effet visuel, mais sans incidence sémantique, utilisez les sélecteurs CSS homonymes&nbsp;: <code>.i</code>, <code>.b</code>, <code>.del</code>, <code>.ins</code>, <code>.small</code>, etc.
 
 	<h3>Autres enrichissements typographiques</h3>
 
@@ -198,7 +198,7 @@
 	<p>Ci-dessus, titre de niveau&nbsp;6&nbsp;: balise <code>&lt;h6&gt;</code>, avec <code>&lt;a&gt;</code> et <code>&lt;small&gt;</code>.</p>
 
 	<hr>
-	<p>Il est possible de styler d'autres éléments HTML comme des titres, avec <code>.h1</code>, <code>.h2</code>, <code>.h3</code>, etc.</p>
+	<p>Il est possible —&nbsp;par exemple pour respecter scrupuleusement une charte graphique dont la hierarchie des titres de coïncide pas avec la réalité du document&nbsp;HTML&nbsp;— de styler d'autres éléments HTML comme des titres, avec <code>.h1</code>, <code>.h2</code>, <code>.h3</code>, etc.</p>
 
 	<strong class="h1">Comme&nbsp;h1</strong>
 	<p>Ci-dessus, balise avec sélecteur CSS <code>.h1</code>.</p>
@@ -848,32 +848,40 @@ p q r s t u v w x y z { | } ~</pre>
 	<p>Pour que vous puissiez choisir seulement ceux dont vous avez besoin, Tiny&nbsp;Typo est répartie en plusieurs fichiers, à appeler dans cet ordre&nbsp:</p>
 
 	<dl>
-
-		<dt><code>reset.css</code></dt>
-		<dd>Vous pouvez remplacer cette feuille par le reset de votre choix, par exemple <a href="http://necolas.github.io/normalize.css/" rel="external" class="external" hreflang="en">normalize.css</a>.</dd>
-
-		<dt><code>clear.css</code></dt>
-		<dd>Aides à la composition (alignements, espaceurs de blocs). Si vous utilisez un framework CSS, il est fort possible que cette feuille soit inutile.</dd>
-
-		<dt><code>font.css</code></dt>
-		<dd>Cette feuille est vierge. Elle sert à déclarer les polices de caractères que vous souhaitez utiliser.</dd>
-
-		<dt><code>typo.css</code></dt>
-		<dd>Base typographique définissant tous les éléments HTML ainsi que textes alignés, encadrés, etc. C'est la feuille principale de Tiny&nbsp;Typo.</dd>
-
-		<dt><code>links.css</code></dt>
-		<dd>Base signalétique des hyperliens.</dd>
-
-		<dt><code>media.css</code></dt>
-		<dd>Styles pour les médias, figures et albums.</dd>
-
-		<dt><code>custom.css</code></dt>
-		<dd>Cette feuille est vierge : elle est destinée à accueillir vos propres styles.</dd>
-
+		<ol>
+			<li>
+				<dt><code>reset.css</code></dt>
+				<dd>Vous pouvez remplacer cette feuille par le reset de votre choix, par exemple <a href="http://necolas.github.io/normalize.css/" rel="external" class="external" hreflang="en">normalize.css</a>.</dd>
+			</li>
+			<li>
+				<dt><code>clear.css</code></dt>
+				<dd>Aides à la composition (alignements, espaceurs de blocs). Si vous utilisez un framework CSS, il est fort possible que cette feuille soit inutile.</dd>
+			</li>
+			<li>
+				<dt><code>font.css</code></dt>
+				<dd>Cette feuille est vierge. Elle sert à déclarer les polices de caractères que vous souhaitez utiliser.</dd>
+			</li>
+			<li>
+				<dt><code>typo.css</code></dt>
+				<dd>Base typographique définissant tous les éléments HTML ainsi que textes alignés, encadrés, etc. C'est la feuille principale de Tiny&nbsp;Typo.</dd>
+			</li>
+			<li>
+				<dt><code>links.css</code></dt>
+				<dd>Base signalétique des hyperliens.</dd>
+			</li>
+			<li>
+				<dt><code>media.css</code></dt>
+				<dd>Styles pour les médias, figures et albums.</dd>
+			</li>
+			<li>
+				<dt><code>custom.css</code></dt>
+				<dd>Cette feuille est vierge : elle est destinée à accueillir vos propres styles.</dd>
+			</li>
+		</ol>
 	</dl>
 
 	<h3>Variables LESS</h3>
-	<p>Tiny&nbsp;Typo est paramétrable. Si vous souhaitez personnaliser davantage, redéfinissez ces variables <a href="http://lesscss.org" rel="external" class="external" hreflang="en">LESS</a> (dans <code>var.less</code>)&nbsp;:</p>
+	<p>Tiny&nbsp;Typo est paramétrable en preprocessing <a href="http://lesscss.org" rel="external" class="external" hreflang="en">LESS</a>. Si vous souhaitez personnaliser davantage, redéfinissez ces variables (dans <code>var.less</code>)&nbsp;:</p>
 
 	<table class="table" id="var">
 		<caption>Variables LESS</caption>
