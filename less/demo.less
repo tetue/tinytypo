@@ -37,7 +37,8 @@ nav#nav ul li a { display: inline-block; padding: 6px; text-decoration: none; }
 blockquote.text-right { padding-left: 0; padding-right: @alinea; border-width: 0 5px 0 0; }
 
 /* bouton */
-.btn { display: inline-block; white-space: nowrap; padding: .25em .75em; background-color: fadeout(@color,70%); border: 1px solid; border-radius: 6px; box-shadow: 0 2px 0 rgba(0, 0, 0, 0.2), 0 0 0 1px #fff inset; color: #333; }
+.btn { display: inline-block; padding: .25em .75em; background-color: fadeout(@color,70%); border: 1px solid; border-radius: 6px; box-shadow: 0 2px 0 rgba(0, 0, 0, 0.2), 0 0 0 1px #fff inset; color: #333; }
+@media (max-width: @screen-small) { #download .btn.big { font-size: 100%; } }
 
 
 /* Variables */
