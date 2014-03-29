@@ -118,6 +118,19 @@ body {
   font-size: 1em;
   line-height: 1.5;
 }
+/* Fonts */
+.font1 {
+  font-family: serif;
+}
+.font2 {
+  font-family: sans-serif;
+}
+.font3 {
+  font-family: monospace;
+}
+.font4 {
+  font-family: fantasy;
+}
 /* Titraille / Intertitres */
 h1,
 .h1,
