@@ -179,23 +179,19 @@ sup,
 .sup,
 sub,
 .sub {
+  position: relative;
   font-size: 80%;
   font-variant: normal;
   line-height: 0;
+  vertical-align: baseline;
 }
 sup,
 .sup {
-  vertical-align: super;
-}
-.ie sup {
-  vertical-align: text-top;
+  top: -0.5em;
 }
 sub,
 .sub {
-  vertical-align: sub;
-}
-.ie sub {
-  vertical-align: text-bottom;
+  bottom: -0.25em;
 }
 .lead {
   font-size: 120%;

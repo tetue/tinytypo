@@ -76,11 +76,9 @@ ins, .ins { background-color: rgba(255,255,204,.5); text-decoration: none; }
 u, .u { text-decoration: underline; }
 
 sup, .sup,
-sub, .sub { font-size: 80%; font-variant: normal; line-height: 0; }
-sup, .sup { vertical-align: super; }
-.ie sup { vertical-align: text-top; }
-sub, .sub { vertical-align: sub; }
-.ie sub { vertical-align: text-bottom; }
+sub, .sub { position: relative; font-size: 80%; font-variant: normal; line-height: 0; vertical-align: baseline; }
+sup, .sup { top: -0.5em; }
+sub, .sub { bottom: -0.25em; }
 
 .lead { font-size: 120%; }
 .caps { font-variant: small-caps; }
