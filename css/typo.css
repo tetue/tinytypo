@@ -2,8 +2,7 @@
 
    Typographical base
    
-   Tiny Typo v1.0 | MIT License
-   (c) 2010-2013 tinytypo.tetue.net
+   (c) 2010-2014 Tiny Typo v1.3 - MIT License - tinytypo.tetue.net
 
 ----------------------------------------------------- */
 html {
@@ -17,6 +16,19 @@ et http://forum.alsacreations.com/topic-4-54377-1.html
 body {
   font-size: 1em;
   line-height: 1.5;
+}
+/* Fonts */
+.font1 {
+  font-family: serif;
+}
+.font2 {
+  font-family: sans-serif;
+}
+.font3 {
+  font-family: monospace;
+}
+.font4 {
+  font-family: fantasy;
 }
 /* Titraille / Intertitres */
 h1,
@@ -166,23 +178,19 @@ sup,
 .sup,
 sub,
 .sub {
+  position: relative;
   font-size: 80%;
   font-variant: normal;
   line-height: 0;
+  vertical-align: baseline;
 }
 sup,
 .sup {
-  vertical-align: super;
-}
-.ie sup {
-  vertical-align: text-top;
+  top: -0.5em;
 }
 sub,
 .sub {
-  vertical-align: sub;
-}
-.ie sub {
-  vertical-align: text-bottom;
+  bottom: -0.25em;
 }
 .lead {
   font-size: 120%;

@@ -2,8 +2,7 @@
 
    Illustrations, images and albums
    
-   Tiny Typo v1.0 | MIT License
-   (c) 2010-2013 tinytypo.tetue.net
+   (c) 2010-2014 Tiny Typo v1.3 - MIT License - tinytypo.tetue.net
 
 ----------------------------------------------------- */
 
@@ -28,37 +27,60 @@ img,
 object,
 embed { max-width: 100%; height: auto; }
 
-object,
-embed { height: 100%; }
-
 @media print {
 	img { max-width: 100% !important; }
 }
 
-/* Remove the gap between images, videos, audio and canvas
-and the bottom of their containers: h5bp.com/i/440 */
-
-audio,
-canvas,
-video,
 img { vertical-align: middle; }
 
-/* Correct `inline-block` display not defined in IE 8/9 */
+/**
+ * 1. Correct `inline-block` display not defined in IE 8/9.
+ * 2. Normalize vertical alignment of `progress` in Chrome, Firefox, and Opera.
+ */
+
 audio,
 canvas,
-video { display: inline-block; }
+progress,
+video {
+  display: inline-block; /* 1 */
+  vertical-align: baseline; /* 2 */
+}
 
-/* Prevent modern browsers from displaying `audio` without controls.
-Remove excess height in iOS 5 devices. */
-audio:not([controls]) { display: none; height: 0; }
+/**
+ * Prevent modern browsers from displaying `audio` without controls.
+ * Remove excess height in iOS 5 devices.
+ */
 
-img { border: 0; }
+audio:not([controls]) {
+  display: none;
+  height: 0;
+}
 
-/* Bicubic resizing for non-native sized IMG:
-code.flickr.com/blog/2008/11/12/on-ui-quality-the-little-things-client-side-image-resizing/ */
-img { -ms-interpolation-mode: bicubic; }
+/**
+ * Address `[hidden]` styling not present in IE 8/9/10.
+ * Hide the `template` element in IE 8/9/11, Safari, and Firefox < 22.
+ */
 
-svg:not(:root) { overflow: hidden; }
+[hidden],
+template {
+  display: none;
+}
+
+/**
+ * Remove border when inside `a` element in IE 8/9/10.
+ */
+
+img {
+  border: 0;
+}
+
+/**
+ * Correct overflow not hidden in IE 9/10/11.
+ */
+
+svg:not(:root) {
+  overflow: hidden;
+}
 
 /* thumbnail */
 .thumb,
