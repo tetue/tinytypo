@@ -518,6 +518,7 @@ q:after {
   content: close-quote;
 }
 blockquote {
+  z-index: 0;
   position: relative;
   padding-left: 1.5em;
   border: solid rgba(34, 34, 34, 0.19999999999999996);
@@ -792,9 +793,7 @@ a:active img {
 
 ----------------------------------------------------- */
 /* Make images responsive by default */
-img,
-object,
-embed {
+img {
   max-width: 100%;
   height: auto;
 }
