@@ -1,0 +1,24 @@
+{
+  "name": "tinytypo",
+  "version": "1.3",
+  "description": "Tiny Typo est une base CSS pour le contenu éditorial web",
+  "main": "css/tinytypo.css",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/tetue/tinytypo"
+  },
+  "homepage": "http://tinytypo.tetue.net/",
+  "keywords": [
+    "html",
+    "css",
+    "less",
+    "typography"
+  ],
+  "contributors": [
+    "tetue"
+  ],
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/tetue/tinytypo/issues"
+  }
+}
