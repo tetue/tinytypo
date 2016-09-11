@@ -2,7 +2,7 @@
 
    Hyperlinks
    
-   (c) 2010-2014 Tiny Typo v1.3.3 - MIT License - tinytypo.tetue.net
+   (c) 2010-2014 Tiny Typo v1.3.4 - MIT License - tinytypo.tetue.net
 
 ----------------------------------------------------- */
 /* Hyperlinks
@@ -40,6 +40,7 @@ a small {
 }
 a[hreflang]:after {
   content: "\0000a0[" attr(hreflang) "]";
+  font-weight: normal;
 }
 /* External Links */
 a.external:after {
