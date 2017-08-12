@@ -189,7 +189,12 @@ q { quotes: "\201C" "\201D" "\2018" "\2019"; } // “ ” ‘ ’
 q:before { content: open-quote; }
 q:after { content: close-quote; }
 
-blockquote { z-index: 0; position: relative; padding-left: @alinea; border: solid fadeout(@color-txt,80%); border-width: 0 0 0 5px; }
+blockquote {
+  z-index: 0; // https://github.com/tetue/tinytypo/pull/9
+  position: relative;
+  margin-left: 0; margin-right: 0; // Reset margin by default in all browsers
+  padding-left: @alinea; padding-right: @alinea; border: solid fadeout(@color-txt,80%); border-width: 0 0 0 5px;
+}
 blockquote:before { z-index: -1; position: absolute; left: 0; top: 0; content: "\00AB"; line-height: 0; font-size: 10em; color: fadeout(@color-txt,90%); }
 cite, .cite { font-style: italic; }
 

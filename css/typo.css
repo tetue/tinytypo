@@ -422,7 +422,10 @@ q:after {
 blockquote {
   z-index: 0;
   position: relative;
+  margin-left: 0;
+  margin-right: 0;
   padding-left: 1.5em;
+  padding-right: 1.5em;
   border: solid rgba(34, 34, 34, 0.19999999999999996);
   border-width: 0 0 0 5px;
 }
