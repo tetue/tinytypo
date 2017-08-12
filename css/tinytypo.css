@@ -3,7 +3,7 @@
    Composition helpers
    [fr] Aides a la composition
    
-   (c) 2010-2017 Tiny Typo v2.2.1 - MIT License - tinytypo.tetue.net
+   (c) 2010-2017 Tiny Typo v2.3 - MIT License - tinytypo.tetue.net
 
 ----------------------------------------------------- */
 /* Box model
@@ -101,7 +101,7 @@ hr.clear {
 
    Typographical base
    
-   (c) 2010-2017 Tiny Typo v2.2.1 - MIT License - tinytypo.tetue.net
+   (c) 2010-2017 Tiny Typo v2.3 - MIT License - tinytypo.tetue.net
 
 ----------------------------------------------------- */
 html {
@@ -625,6 +625,7 @@ address,
 pre,
 .table,
 fieldset {
+  margin-top: 0;
   margin-bottom: 1.5em;
 }
 /* Typography for small screens
@@ -702,7 +703,7 @@ Inlined to avoid required HTTP connection: h5bp.com/r */
 
    Hyperlinks
    
-   (c) 2010-2017 Tiny Typo v2.2.1 - MIT License - tinytypo.tetue.net
+   (c) 2010-2017 Tiny Typo v2.3 - MIT License - tinytypo.tetue.net
 
 ----------------------------------------------------- */
 /* Hyperlinks
@@ -800,7 +801,7 @@ a:active img {
 
    Illustrations, images and albums
    
-   (c) 2010-2017 Tiny Typo v2.2.1 - MIT License - tinytypo.tetue.net
+   (c) 2010-2017 Tiny Typo v2.3 - MIT License - tinytypo.tetue.net
 
 ----------------------------------------------------- */
 /* Make images responsive by default */
