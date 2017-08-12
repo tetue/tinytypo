@@ -2,24 +2,24 @@
 
    Hyperlinks
    
-   (c) 2010-2017 Tiny Typo v1.3.5 - MIT License - tinytypo.tetue.net
+   (c) 2010-2017 Tiny Typo v2.0 - MIT License - tinytypo.tetue.net
 
 ----------------------------------------------------- */
 /* Hyperlinks
 [fr] Signalétique des hyperliens : http://letrainde13h37.fr/43/signaletique-hyperliens/ */
 a {
   background: transparent;
+  -webkit-text-decoration-skip: objects;
   color: inherit;
 }
 a:visited {
   color: inherit;
 }
 a:focus {
-  outline: thin dotted;
-  background: #222222 !important;
-  border-color: #222222 !important;
-  color: #f8f8f8 !important;
-  text-shadow: none;
+  /* http://www.outlinenone.com
+  /* outline: thin dotted;
+  /* Remember to define focus styles! */
+
 }
 a:hover {
   outline: 0;
@@ -28,10 +28,6 @@ a:hover {
 a:active {
   outline: 0;
 }
-/* a { outline: none; }
-[en] http://www.outlinenone.com
-[fr] http://www.outlinenone.fr
-*/
 a:after,
 a:before,
 a small {
@@ -98,5 +94,4 @@ a:active img {
   a[href^="#"]:after {
     content: '';
   }
-  /* Don't show links for images, or javascript/internal links */
 }

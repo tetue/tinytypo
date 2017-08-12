@@ -2,7 +2,7 @@
 
    Hyperlinks
    
-   (c) 2010-2017 Tiny Typo v1.3.5 - MIT License - tinytypo.tetue.net
+   (c) 2010-2017 Tiny Typo v2.0 - MIT License - tinytypo.tetue.net
 
 ----------------------------------------------------- */
 
@@ -11,17 +11,27 @@
 /* Hyperlinks
 [fr] Signalétique des hyperliens : http://letrainde13h37.fr/43/signaletique-hyperliens/ */
 
-a { background: transparent; color: inherit; }
-a:visited { color: inherit; }
-a:focus { outline: thin dotted; background: @color-txt !important; border-color: @color-txt !important; color: @color-bg !important; text-shadow: none; }
-a:hover { outline: 0; cursor: pointer; }
-a:active { outline: 0; }
-
-/* a { outline: none; }
-[en] http://www.outlinenone.com
-[fr] http://www.outlinenone.fr
-*/
-
+a {
+  background: transparent; // Remove the gray background on active links in IE 10.
+  -webkit-text-decoration-skip: objects; // Remove gaps in links underline in iOS 8+ and Safari 8+.
+  color: inherit; // Same color as current text
+}
+a:visited {
+  color: inherit;
+}
+a:focus {
+  /* http://www.outlinenone.com
+  /* outline: thin dotted;
+  /* Remember to define focus styles! */
+  // background-color: @color-txt !important; border-color: @color-txt !important; color: @color-bg !important; text-shadow: none;
+}
+a:hover {
+  outline: 0;
+  cursor: pointer;
+}
+a:active {
+  outline: 0;
+}
 
 a:after,
 a:before,
@@ -67,5 +77,5 @@ a:active img {
   
   .ir a:after,
   a[href^="javascript:"]:after,
-  a[href^="#"]:after { content: ''; } /* Don't show links for images, or javascript/internal links */
+  a[href^="#"]:after { content: ''; } // Don't show links for images, or javascript/internal links
 }
