@@ -515,7 +515,7 @@ fieldset {
 /* Typography for small screens
 [fr] http://www.alsacreations.com/astuce/lire/1177 */
 @media (max-width: 640px) {
-  /* fixer une largeur maximale  de 100 % aux elements potentiellement problematiques */
+  /* Set a maximum width of 100% for potentially problematic elements */
   img,
   table,
   td,
