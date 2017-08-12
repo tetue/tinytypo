@@ -62,7 +62,7 @@ body { text-align: center; }
 
 	<p>Troisième paragraphe, précédé d&#8217;une ligne horizontale de séparation&nbsp;<code>&lt;hr&gt;</code>. La&nbsp;lecture sur écran est fastidieuse et provoque rapidement de la fatigue oculaire. Il&nbsp;est donc recommandé d'aérer le texte&nbsp;: faire des paragraphes courts et sauter une ligne entre chaque.</p>
 
-	<h2>Marquages sémantiques</h2>
+	<h2 id="semantics">Marquages sémantiques</h2>
 	<!-- Cf. : http://www.la-grange.net/w3c/html4.01/struct/text.html#h-9.2.1 -->
 
 	<dl>
@@ -105,11 +105,11 @@ body { text-align: center; }
 		<dd>L'élément <code>&lt;time&gt;</code> représente une heure ou une date précise du calendrier grégorien et pour les rendre interprétables par un ordinateur. Née le <time datetime="1815-12-10">10 décembre 1815</time> et morte le <time datetime="1852-11-27">27 novembre 1852</time> à Londres, Ada Lovelace est considérée comme <q>le premier programmeur du monde</q>.</dd>
 	</dl>
 
-	<p>Pour obtenir le même effet visuel, mais sans incidence sémantique, utilisez les sélecteurs CSS homonymes&nbsp;: <code>.i</code>, <code>.b</code>, <code>.del</code>, <code>.ins</code>, <code>.small</code>, etc.
+	<p>Astuce&nbsp;: pour obtenir le même effet visuel, mais sans incidence sémantique, utilisez les sélecteurs CSS homonymes&nbsp;: <code>.i</code>, <code>.b</code>, <code>.del</code>, <code>.ins</code>, <code>.small</code>, etc.
 
 	<h3>Autres enrichissements typographiques</h3>
 
-	<p>Les enrichissements typographiques suivants ne sont pas disponibles en HTML natif et sont donc proposés en&nbsp;CSS par Tiny&nbsp;Typo&nbsp;:</p>
+	<p>Les enrichissements typographiques suivants ne sont pas disponibles en&nbsp;HTML natif et sont donc proposés en&nbsp;CSS par Tiny&nbsp;Typo&nbsp;:</p>
 
 	<ul>
 		<li><code>.caps</code>&nbsp;: <span class="caps">Petites capitales</span></li>
@@ -618,12 +618,12 @@ body { text-align: center; }
 		<br><small>Margaret Mead (1901-1978)</small></p>
 	</blockquote>
 
-	<p>Les citations peuvent être imbriquées. Par exemple, le procès-verbal rapporte&nbsp;: <q>La présidente clôtura la dernière réunion de l'année en disant&nbsp;: <q>Je vous dis à tous et toutes&nbsp;: <q lang="en">happy holidays!</q> et <q lang="ar" dir="rtl">أعيادا سعيدة</q> et j'espère vous retrouver en pleine forme à la rentrée</q>.</q><p>
+	<p>Les citations peuvent être imbriquées. Par exemple, le procès-verbal rapporte&nbsp;: <q>La&nbsp;présidente clôtura la dernière réunion de l'année en disant&nbsp;: <q>Je&nbsp;vous dis à tous et toutes&nbsp;: <q lang="en">happy holidays!</q> et <q lang="ar" dir="rtl">أعيادا سعيدة</q> et j'espère vous retrouver en pleine forme au retour</q>.</q><p>
 
-	<h3>Code</h3>
+	<h3 id="code">Code</h3>
 	<!-- Cf.: http://romy.tetue.net/543 -->
 
-	<p>Plusieurs éléments HTML servent à citer des fragments de code informatique&nbsp;:</p>
+	<p>Plusieurs éléments HTML servent à citer des bouts de code informatique&nbsp;:</p>
 
 	<ul>
 		<li><code>&lt;code&gt;</code>&nbsp;: <code>extrait de code</code></li>
@@ -682,14 +682,13 @@ p q r s t u v w x y z { | } ~</pre>
 		<li><code>.center</code>&nbsp;: centre le bloc</li>
 		<li><code>.clear</code>&nbsp;: espaceur de blocs flottants</li>
 		<li><code>.clearfix</code>&nbsp;: espaceur de blocs flottants</li>
-		<li><code>.p</code>&nbsp;: marge basse, calée sur la grille</li>
+		<li><code>.p</code>&nbsp;: marge basse, calée sur la grille, comme les paragraphes</li>
 	</ul>
 
 	<h3>Alignements</h3>
 
 	<div class="text-justify">
-		<p>Texte justifié avec <code>.text-justify</code>. Il est possible de justifier le texte, c'est-à-dire que toutes les lignes d'un paragraphe aient la même longueur. Est-ce intéressant de le faire&nbsp;? D'un point de vue de lisibilité, des études montrent qu'un texte en drapeau est plus accessible à l'œil&nbsp;: l'irrégularité des fins de lignes sert de repère visuel et fatigue moins le lecteur. Pourtant, un alignement justifié donne un résultat esthétique plus agréable et une impression de plus grande régularité.
-	    <br>Lire le conseil sur ergologique.com&nbsp;: <a href="http://www.ergologique.com/conseils/conseils.php?id_tip=818" rel="external" class="external">Le texte se justifie-t-il&nbsp;?</a></p>
+		<p>Texte justifié avec <code>.text-justify</code>. Il est possible de justifier le texte, c'est-à-dire que toutes les lignes d'un paragraphe aient la même longueur. Est-ce intéressant de le faire&nbsp;? D'un point de vue de lisibilité, des études montrent qu'un texte en drapeau est plus accessible à l'œil&nbsp;: l'irrégularité des fins de lignes sert de repère visuel et fatigue moins le lecteur. Pourtant, un alignement justifié donne un résultat esthétique plus agréable et une impression de plus grande régularité.</p>
 	</div>
 	<div class="text-left">
 		<p>Texte ferré à gauche avec <code>.text-left</code>. Il ne faut pas confondre le terme de justification avec l'expression « justifié » à gauche ou à droite souvent employée à tort à la place de « ferré » à gauche ou à droite. Les textes sont par défaut ferrés à gauche et sont par nature, selon la taille de l'écran, sa définition et la taille de la fenêtre dans laquelle le texte apparaît, d'une justification plus ou moins longue.</p>
@@ -863,7 +862,7 @@ p q r s t u v w x y z { | } ~</pre>
 </main>
 <footer role="contentinfo">
 	<hr>
-	<p><small>&copy; 2010-2017 Tiny Typo v1.3.5 - MIT License - <a href="http://tinytypo.tetue.net">tinytypo.tetue.net</a></small></p>
+	<p><small>&copy; 2010-2017 Tiny Typo v2.0 - MIT License - <a href="http://tinytypo.tetue.net">tinytypo.tetue.net</a></small></p>
 </footer>
 </div><!--.page-->
 </body>
