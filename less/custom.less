@@ -1,0 +1,24 @@
+/* --------------------------------------------------
+
+   custom.css
+
+----------------------------------------------------- */
+
+@import "var.less";
+
+/* Add your style here
+[fr] Écrivez vos styles ici */
+
+@font1: Georgia, 'Times New Roman', serif;
+body,
+.font1 { font-family: @font1; }
+
+h1,.h1,
+h2,.h2,
+h3,.h3 { color: @color; }
+
+@color-link-hover: blue;
+a { text-decoration: none; border-bottom: 1px solid; }
+a:focus, a:hover, a:active { background-color: fadeout(@color-link-hover,90%); color: @color-link-hover; }
+
+/* … */

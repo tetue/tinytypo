@@ -1,0 +1,30 @@
+/* --------------------------------------------------
+
+   custom.css
+
+----------------------------------------------------- */
+/* Add your style here
+[fr] Écrivez vos styles ici */
+body,
+.font1 {
+  font-family: Georgia, 'Times New Roman', serif;
+}
+h1,
+.h1,
+h2,
+.h2,
+h3,
+.h3 {
+  color: #990000;
+}
+a {
+  text-decoration: none;
+  border-bottom: 1px solid;
+}
+a:focus,
+a:hover,
+a:active {
+  background-color: rgba(0, 0, 255, 0.09999999999999998);
+  color: #0000ff;
+}
+/* … */
