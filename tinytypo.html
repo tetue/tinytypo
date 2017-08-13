@@ -116,17 +116,6 @@ body { text-align: center; }
 		<li><code>.caps</code>&nbsp;: <span class="caps">Petites capitales</span></li>
 		<li><code>.quiet</code>&nbsp;: <span class="quiet">Texte discret</span></li>
 	</ul>
-
-	<p>Tailles de texte&nbsp;:</p>
-
-	<ul>
-		<li><code>.biggest</code>&nbsp;: <span class="biggest">biggest</span></li>
-		<li><code>.bigger</code>&nbsp;: <span class="bigger">bigger</span></li>
-		<li><code>.big</code>&nbsp;: <span class="big">big</span></li>
-		<li>texte de base</li>
-		<li><code>.small</code>&nbsp;: <span class="small">small</span></li>
-		<li><code>.smaller</code>&nbsp;: <span class="smaller">smaller</span></li>
-	</ul>
 </section>
 
 
@@ -161,7 +150,7 @@ body { text-align: center; }
 </section>
 
 
-<section id="heading">
+<section class="clearfix" id="heading">
 	<h1>Titre de niveau&nbsp;h1</h1>
 	<p>Chaque page web est identifiée par un titre, unique dans le site. C'est le titre de premier niveau du document. Il est balisé par l'élément HTML <code>&lt;h1&gt;</code>. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
 
@@ -192,26 +181,28 @@ body { text-align: center; }
 	<h6>Titre&nbsp;6 avec <a href="">lien</a> <small>et small</small></h6>
 	<p>Ci-dessus, titres avec <code>&lt;a&gt;</code> et <code>&lt;small&gt;</code>.</p>
 
-	<hr>
-	<p>Il est possible —&nbsp;par exemple lorsque l'habillage graphique ne coïncide pas parfaitement avec la réalité du document&nbsp;HTML&nbsp;— de styler d'autres éléments HTML comme des titres, avec <code>.h1</code>, <code>.h2</code>, <code>.h3</code>, etc.</p>
-
-	<strong class="h1">Comme&nbsp;h1</strong>
-	<p>Ci-dessus, balise avec sélecteur CSS <code>.h1</code>.</p>
-
-	<strong class="h2">Comme&nbsp;h2</strong>
-	<p>Ci-dessus, balise avec sélecteur CSS <code>.h2</code>.</p>
-
-	<strong class="h3">Comme&nbsp;h3</strong>
-	<p>Ci-dessus, balise avec sélecteur CSS <code>.h3</code>.</p>
-
-	<strong class="h4">Comme&nbsp;h4</strong>
-	<p>Ci-dessus, balise avec sélecteur CSS <code>.h4</code>.</p>
-
-	<strong class="h5">Comme&nbsp;h5</strong>
-	<p>Ci-dessus, balise avec sélecteur CSS <code>.h5</code>.</p>
-
-	<strong class="h6">Comme&nbsp;h6</strong>
-	<p>Ci-dessus, balise avec sélecteur CSS <code>.h6</code>.</p>
+	<h2 id="fontsize">Tailles de texte</h2>
+	<p>La taille du texte est définie en une fois pour l'ensemble du document. Elle s'exprime en unités relatives (<code>em</code> et&nbsp;<code>%</code>) afin de permettre aux lecteur/trices de l'agrandir facilement si&nbsp;besoin.</p>
+	<p class="big">N'utilisez jamais les titres <code>h…</code> pour afficher un texte plus gros&nbsp;!</p>
+	<div class="half">
+		<ul class="list-none">
+			<li class="p"><span class="biggest">Texte plus gros</span><br>avec <code>.biggest</code></li>
+			<li class="p"><span class="bigger">Texte plus gros</span><br>avec <code>.bigger</code></li>
+			<li class="p"><span class="big">Texte plus gros</span><br>avec <code>.big</code></li>
+			<li class="p">Texte de base</li>
+			<li class="p"><span class="small">Texte plus petit</span><br>avec <code>.small</code></li>
+			<li><span class="smaller">Texte plus petit</span><br>avec <code>.smaller</code></li>
+		</ul>
+	</div>
+	<div class="half">
+		<p>Il est possible —&nbsp;par exemple lorsque l'habillage graphique ne coïncide pas parfaitement avec la réalité du document&nbsp;HTML&nbsp;— de styler d'autres éléments HTML comme des titres, avec <code>.h1</code>, <code>.h2</code>, <code>.h3</code>, etc.&nbsp;:</p>
+		<strong class="h1">Comme&nbsp;h1</strong>
+		<strong class="h2">Comme&nbsp;h2</strong>
+		<strong class="h3">Comme&nbsp;h3</strong>
+		<strong class="h4">Comme&nbsp;h4</strong>
+		<strong class="h5">Comme&nbsp;h5</strong>
+		<strong class="h6">Comme&nbsp;h6</strong>
+	</div>
 </section>
 
 
