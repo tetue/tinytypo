@@ -2,7 +2,7 @@
 
    Illustrations, images and albums
    
-   (c) 2010-2017 Tiny Typo v2.4.1 - MIT License - tinytypo.tetue.net
+   (c) 2010-2017 Tiny Typo v2.4.2 - MIT License - tinytypo.tetue.net
 
 ----------------------------------------------------- */
 
@@ -21,63 +21,28 @@
 // - video
 // - vnd
 
-/* Make images responsive by default */
-
-img { max-width: 100%; height: auto; }
-
+img {
+  max-width: 100%; height: auto; // Make images responsive by default
+  border: 0; // Remove the border on images inside links in IE 10-.
+}
 @media print {
 	img { max-width: 100% !important; }
 }
 
-img { vertical-align: middle; }
-
-/**
- * 1. Correct `inline-block` display not defined in IE 8/9.
- * 2. Normalize vertical alignment of `progress` in Chrome, Firefox, and Opera.
- */
+svg:not(:root) {
+  overflow: hidden; // Correct overflow not hidden in IE 9/10/11.
+}
 
 audio,
 canvas,
 progress,
 video {
-  display: inline-block; /* 1 */
-  vertical-align: baseline; /* 2 */
+  display: inline-block; // Add the correct display in IE 9-.
+  vertical-align: baseline; // Normalize vertical alignment of `progress` in Chrome, Firefox, and Opera.
 }
-
-/**
- * Prevent modern browsers from displaying `audio` without controls.
- * Remove excess height in iOS 5 devices.
- */
 
 audio:not([controls]) {
-  display: none;
-  height: 0;
-}
-
-/**
- * Address `[hidden]` styling not present in IE 8/9/10.
- * Hide the `template` element in IE 8/9/11, Safari, and Firefox < 22.
- */
-
-[hidden],
-template {
-  display: none;
-}
-
-/**
- * Remove border when inside `a` element in IE 8/9/10.
- */
-
-img {
-  border: 0;
-}
-
-/**
- * Correct overflow not hidden in IE 9/10/11.
- */
-
-svg:not(:root) {
-  overflow: hidden;
+  display: none; height: 0; // Add the correct display in iOS 4-7.
 }
 
 /* thumbnail */
@@ -90,10 +55,13 @@ img.round { border-radius: 5px; }
 img.circle { border-radius: 50%; }
 img.border { padding: 4px; background-color: #fff; border: 1px solid #bbb; }
 img.shadow { box-shadow: -1px 2px 5px 1px rgba(0, 0, 0, 0.7), -1px 2px 20px rgba(255, 255, 255, 0.6) inset; }
-// img.clean {}
-// img.wide {}
 
 /* figure */
+figcaption,
+figure {
+  display: block; // Add the correct display in IE 9-.
+}
+
 figure { margin: 0; margin-bottom: @p/2; text-align: center; }
 figure.center { margin-bottom: @p; }
 figure.left { margin-right: @gutter; }

@@ -3,7 +3,7 @@
    Composition helpers
    [fr] Aides a la composition
    
-   (c) 2010-2017 Tiny Typo v2.4.1 - MIT License - tinytypo.tetue.net
+   (c) 2010-2017 Tiny Typo v2.4.2 - MIT License - tinytypo.tetue.net
 
 ----------------------------------------------------- */
 /* Box model
@@ -101,7 +101,7 @@ hr.clear {
 
    Typographical base
    
-   (c) 2010-2017 Tiny Typo v2.4.1 - MIT License - tinytypo.tetue.net
+   (c) 2010-2017 Tiny Typo v2.4.2 - MIT License - tinytypo.tetue.net
 
 ----------------------------------------------------- */
 html {
@@ -712,7 +712,7 @@ Inlined to avoid required HTTP connection: h5bp.com/r */
 
    Hyperlinks
    
-   (c) 2010-2017 Tiny Typo v2.4.1 - MIT License - tinytypo.tetue.net
+   (c) 2010-2017 Tiny Typo v2.4.2 - MIT License - tinytypo.tetue.net
 
 ----------------------------------------------------- */
 /* Hyperlinks
@@ -810,64 +810,32 @@ a:active img {
 
    Illustrations, images and albums
    
-   (c) 2010-2017 Tiny Typo v2.4.1 - MIT License - tinytypo.tetue.net
+   (c) 2010-2017 Tiny Typo v2.4.2 - MIT License - tinytypo.tetue.net
 
 ----------------------------------------------------- */
-/* Make images responsive by default */
 img {
   max-width: 100%;
   height: auto;
+  border: 0;
 }
 @media print {
   img {
     max-width: 100% !important;
   }
 }
-img {
-  vertical-align: middle;
+svg:not(:root) {
+  overflow: hidden;
 }
-/**
- * 1. Correct `inline-block` display not defined in IE 8/9.
- * 2. Normalize vertical alignment of `progress` in Chrome, Firefox, and Opera.
- */
 audio,
 canvas,
 progress,
 video {
   display: inline-block;
-  /* 1 */
-
   vertical-align: baseline;
-  /* 2 */
-
 }
-/**
- * Prevent modern browsers from displaying `audio` without controls.
- * Remove excess height in iOS 5 devices.
- */
 audio:not([controls]) {
   display: none;
   height: 0;
-}
-/**
- * Address `[hidden]` styling not present in IE 8/9/10.
- * Hide the `template` element in IE 8/9/11, Safari, and Firefox < 22.
- */
-[hidden],
-template {
-  display: none;
-}
-/**
- * Remove border when inside `a` element in IE 8/9/10.
- */
-img {
-  border: 0;
-}
-/**
- * Correct overflow not hidden in IE 9/10/11.
- */
-svg:not(:root) {
-  overflow: hidden;
 }
 /* thumbnail */
 .thumb,
@@ -893,6 +861,10 @@ img.shadow {
   box-shadow: -1px 2px 5px 1px rgba(0, 0, 0, 0.7), -1px 2px 20px rgba(255, 255, 255, 0.6) inset;
 }
 /* figure */
+figcaption,
+figure {
+  display: block;
+}
 figure {
   margin: 0;
   margin-bottom: 0.75em;
