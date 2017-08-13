@@ -1,12 +1,10 @@
 Tiny Typo
 =========
 
-Tiny Typo est une base CSS pour le contenu éditorial web, prête à l'emploi, pour des pages web lisibles, sur tous les supports.
+Tiny Typo is a CSS base for web editorial content, ready for use, for readable web pages, on all media.
 
-Tiny Typo fait le minimum typographique nécessaire à la rédaction de documents web.
+This microframework makes the typographic minimum necessary for the writing of web documents. Compliant with W3C standards, Tiny Typo is designed for all devices, naturally responsive, without forgetting print, multilingualism and accessibility.
 
-Facile à utiliser, elle vient compléter votre reset habituel pour servir de base à vos propres styles, sans fioriture, de façon non intrusive. Faite de HTML et CSS, elle est simple et robuste, très légère (sans image, ni fonte, ni JavaScript). Elle est personnalisable en LESS.
-
-Tiny Typo est respectueuse des standards W3C, naturellement responsive, prévue pour l'écran et l'impression, pour le multilinguisme et soucieuse d'accessibilité.
+Tiny Typo holds only two files! Easy to use, it complements your usual reset to serve as foundation for your own styles. Made of HTML and CSS, it's simple and robust, very light (no image, no font, no JavaScript). It is customizable via LESS.
 
 Demo : [tinytypo.tetue.net](http://tinytypo.tetue.net)
