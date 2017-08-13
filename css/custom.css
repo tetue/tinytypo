@@ -5,6 +5,7 @@
 ----------------------------------------------------- */
 /* Add your style here
 [fr] Écrivez vos styles ici */
+/* For example: */
 body,
 .font1 {
   font-family: Georgia, 'Times New Roman', serif;
@@ -26,4 +27,3 @@ a:hover,
 a:active {
   color: #0000ff;
 }
-/* … */
