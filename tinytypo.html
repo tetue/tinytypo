@@ -12,11 +12,17 @@
 <link rel="stylesheet" type="text/css" href="css/tinytypo.css">
 <link rel="stylesheet" type="text/css" href="css/custom.css">
 
+<!-- Styles for demo only -->
 <style>
 body { text-align: center; }
 .page { width: 40em; max-width: 768px; margin: 1em auto; text-align: left; }
 @media ( max-width: 768px) { .page { width: 80%; } }
 @media ( max-width: 480px) { .page { width: auto; margin: 1em 10px; } }
+
+.left { float: left; }
+.right { float: right; }
+.center { margin-left: auto; margin-right: auto; }
+.clear { clear: both; }
 
 .half { float: left; width: 45%; margin-right: 5%; }
 .third { float: left; width: 30%; margin-right: 3%; }
@@ -642,6 +648,7 @@ p q r s t u v w x y z { | } ~</pre>
 	<p>Avec Tiny&nbsp;Typo, il est possible d'aligner les blocs et de créer des encadrés, par l'ajout de sélecteurs&nbsp;CSS&nbsp;:</p>
 
 	<div class="half">
+		<p>Alignements&nbsp;:</p>
 		<ul class="list-none">
 			<li><code>.text-left</code>&nbsp;: ferre le texte à gauche</li>
 			<li><code>.text-right</code>&nbsp;: ferre le texte à droite</li>
@@ -652,6 +659,7 @@ p q r s t u v w x y z { | } ~</pre>
 	</div>
 	
 	<div class="half">
+		<p>Positionnements&nbsp;:</p>
 		<ul class="list-none">
 			<li><code>.left</code>&nbsp;: positionne le bloc à gauche</li>
 			<li><code>.right</code>&nbsp;: positionne le bloc à gauche</li>
@@ -831,7 +839,7 @@ p q r s t u v w x y z { | } ~</pre>
 </main>
 <footer role="contentinfo">
 	<hr>
-	<p><small>&copy; Tiny Typo v2.4.3 2017 - MIT License - <a href="http://tinytypo.tetue.net">tinytypo.tetue.net</a></small></p>
+	<p><small>&copy; Tiny Typo v2.5 2017 - MIT License - <a href="http://tinytypo.tetue.net">tinytypo.tetue.net</a></small></p>
 </footer>
 </div><!--.page-->
 </body>
