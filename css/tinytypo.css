@@ -462,7 +462,7 @@ cite,
   font-style: italic;
 }
 address {
-  font-style: italic;
+  font-style: normal;
 }
 pre,
 code,
