@@ -106,7 +106,7 @@ body { text-align: center; }
 
 		<dt><code>&lt;sub&gt;</code> et <code>&lt;sup&gt;</code></dt>
 		<!-- Cf.: http://www.la-grange.net/w3c/html4.01/struct/text.html#h-9.2.3 -->
-		<dd>Les éléments <code>&lt;sub&gt;</code> et <code>&lt;sup&gt;</code> marquent les indices et les exposants, par exemple&nbsp;: <abbr>H<sub>2</sub>O</abbr> et E=mc<sup>2</sup>. Ne pas confondre <abbr title="numéro">n<sup>o</sup></abbr> et&nbsp;<abbr title="degré Celsius">°C</abbr>.</dd>
+		<dd>Les éléments <code>&lt;sub&gt;</code> et <code>&lt;sup&gt;</code> marquent les indices et les exposants, par exemple&nbsp;: <abbr>H<sub>2</sub>O</abbr> et&nbsp;E=mc<sup>2</sup>. Ne&nbsp;pas confondre <abbr title="numéro">n<sup>o</sup></abbr> et&nbsp;<abbr title="degré Celsius">°C</abbr>.</dd>
 
 		<dt><code>&lt;time&gt;</code></dt>
 		<dd>L'élément <code>&lt;time&gt;</code> représente une heure ou une date précise du calendrier grégorien et pour les rendre interprétables par un ordinateur. Née le <time datetime="1815-12-10">10 décembre 1815</time> et morte le <time datetime="1852-11-27">27 novembre 1852</time> à Londres, Ada Lovelace est considérée comme <q>le premier programmeur du monde</q>.</dd>
@@ -119,8 +119,12 @@ body { text-align: center; }
 	<p>Les enrichissements typographiques suivants ne sont pas disponibles nativement en&nbsp;HTML et sont donc proposés en&nbsp;CSS par Tiny&nbsp;Typo&nbsp;:</p>
 
 	<ul>
-		<li><code>.caps</code>&nbsp;: <span class="caps">Petites capitales</span></li>
-		<li><code>.quiet</code>&nbsp;: <span class="quiet">Texte discret</span></li>
+		<li><code>.quiet</code> pour du texte discret&nbsp;: <span class="quiet">Majuscule et CAPITALES</span></li>
+		<li><code>.lw</code> pour passer en minuscules&nbsp;: <span class="lw">Majuscule et CAPITALES</span></li>
+		<li><code>.up</code> pour passer en capitales&nbsp;: <span class="up">Majuscule et CAPITALES</span></li>
+		<li><code>.sc</code> pour passer en petites capitales&nbsp;: <span class="sc">Majuscule et CAPITALES</span></li>
+		<li><code>.caps</code> pour des capitales avec majuscules&nbsp;: <span class="caps">Majuscule et CAPITALES</span></li>
+		<!-- Cf.: https://orthogaffe.wordpress.com/2010/03/01/petites-capitales/ -->
 	</ul>
 </section>
 

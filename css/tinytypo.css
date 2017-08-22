@@ -193,11 +193,24 @@ sub,
 .lead {
   font-size: 120%;
 }
-.caps {
-  font-variant: small-caps;
-}
 .quiet {
   color: #555555;
+}
+.lw {
+  text-transform: lowercase;
+}
+.up {
+  text-transform: uppercase;
+  letter-spacing: .05em;
+}
+.sc {
+  text-transform: lowercase;
+  font-variant: small-caps;
+  letter-spacing: .05em;
+}
+.caps {
+  font-variant: small-caps;
+  letter-spacing: .05em;
 }
 /* Alignment */
 .text-left {

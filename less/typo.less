@@ -80,8 +80,15 @@ sup, .sup { top: -0.5em; }
 sub, .sub { bottom: -0.25em; }
 
 .lead { font-size: 120%; }
-.caps { font-variant: small-caps; }
 .quiet { color: lighten(@color-txt, 20%); }
+.lw { text-transform: lowercase; }
+.up { text-transform: uppercase; letter-spacing: .05em; }
+.sc {
+  text-transform: lowercase;
+  font-variant: small-caps;
+  letter-spacing: .05em; // http://practicaltypography.com/letterspacing.html
+}
+.caps { font-variant: small-caps; letter-spacing: .05em; }
 
 /* Alignment */
 .text-left { text-align: left; }
@@ -110,9 +117,11 @@ ul ol,
 ol ul { margin-top: 0; margin-bottom: 0; }
 
 ol,
-ul { margin-left: @alinea;
--webkit-margin-before: 0;
--webkit-margin-after: 0; }
+ul {
+  margin-left: @alinea;
+  -webkit-margin-before: 0;
+  -webkit-margin-after: 0;
+}
 
 dl {}
 dt { font-weight: bold; }
