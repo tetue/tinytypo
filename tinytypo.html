@@ -584,21 +584,19 @@ body { text-align: center; }
 	<h3>Citations</h3>
 	<!-- Cf.: http://romy.tetue.net/361 -->
 
-	<p>Les citations s'emploient pour signaler un changement de locuteur/trice dans le texte. Voici une citation ordinaire, avec la balise&nbsp;HTML <code>&lt;blockquote&gt;</code>, où la source est précisée avec <code>&lt;small&gt;</code> ou <code>&lt;footer&gt;</code> &nbsp;:</p>
+	<p>Les citations s'emploient pour signaler un changement de locuteur/trice dans le texte. Voici une citation ordinaire, avec la balise&nbsp;HTML <code>&lt;blockquote&gt;</code>, où la source est distinguée par <code>.src</code>&nbsp;:</p>
 	<!-- Cf.: http://romy.tetue.net/1009 -->
 
 	<blockquote>
 		<p>Mettre le Web et ses services à la disposition de tous les individus, quels que soient leur matériel ou logiciel, leur infrastructure réseau, leur langue maternelle, leur culture, leur localisation géographique, ou leurs aptitudes physiques ou mentales.
-		<br><small>Tim Berners-Lee, inventeur du Web.</small></p>
+		<br><small class="src">Tim Berners-Lee, inventeur du Web.</small></p>
 	</blockquote>
 
-	<p>Voici un exemple de citation au fil du texte (avec la balise&nbsp;HTML <code>&lt;q&gt;</code>), avec changement de langue&nbsp;: <q lang="la" cite="http://fr.wikipedia.org/wiki/Mens_sana_in_corpore_sano">Mens sana in corpore sano</q>, dixième <cite>Satire</cite> de Juvénal. <q lang="ja">頑張ってください</q> s'exclama-t-il alors.<p>
+	<p>Pour les citations au fil du texte, on utilise la balise&nbsp;HTML <code>&lt;q&gt;</code> (ci-après avec changement de langue)&nbsp;: <q lang="la" cite="http://fr.wikipedia.org/wiki/Mens_sana_in_corpore_sano">Mens sana in corpore sano</q>, dixième <cite>Satire</cite> de Juvénal. <q lang="ja">頑張ってください</q> s'exclama-t-il alors.<p>
 
 	<blockquote class="text-center big" lang="en" cite="http://www.evene.fr/citations/auteur.php?ida=760">
-		<p>Never doubt that a small group of committed people
-		<br>can&nbsp;change the&nbsp;world.
-		<br>Indeed, it is the only thing that&nbsp;ever&nbsp;has.</p>
-		<footer>Margaret Mead (1901-1978)</footer>
+		<p>Web Design is 95% Typography.</p>
+		<footer class="src"><a href="https://ia.net/topics/the-web-is-all-about-typography-period/" class="external">Oliver Reichenstein &#8211; iA</a>.</footer>
 	</blockquote>
 
 	<p>Les citations peuvent être imbriquées. Par exemple, le procès-verbal rapporte&nbsp;: <q>La&nbsp;professeur clôtura le dernier atelier en lançant&nbsp;: <q>Je&nbsp;vous dis à tous et toutes&nbsp;: <q lang="en">happy holidays!</q> et <q lang="ar" dir="rtl">أعيادا سعيدة</q> et j'espère vous retrouver en pleine forme au retour</q>.</q><p>
@@ -681,7 +679,7 @@ p q r s t u v w x y z { | } ~</pre>
 		<p>Texte ferré à gauche avec <code>.text-left</code>. Il ne faut pas confondre le terme de justification avec l'expression « justifié » à gauche ou à droite souvent employée à tort à la place de « ferré » à gauche ou à droite. Les textes sont par défaut ferrés à gauche et sont par nature, selon la taille de l'écran, sa définition et la taille de la fenêtre dans laquelle le texte apparaît, d'une justification plus ou moins longue.</p>
 	</div>
 	<div class="text-center">
-		<p>Texte centré avec <code>.text-center</code>. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+		<p>Texte centré avec <code>.text-center</code>. Un texte peut être centré sur un axe vertical central. Lorsque vous centrez un texte, pensez à annuler le retrait de première ligne pour le paragraphe concerné, si vous l’utilisez. Pourquoi&nbsp;? Parce que le texte ne centre pas entre les marges de la page, mais entre le retrait de première ligne (à&nbsp;gauche) et la marge de&nbsp;droite. Hé&nbsp;oui, c’est la&nbsp;vie.</p>
 	</div>
 	<div class="text-right">
 		<p>Texte ferré à droite avec <code>.text-right</code>. Le terme de «&nbsp;fer&nbsp;» vient de la façon dont le compositeur alignait les lignes sur son composteur en typographie&nbsp;: les lignes étaient alignées sur le «&nbsp;fer&nbsp;» à gauche, sur la partie mobile du composteur, afin de créer un «&nbsp;drapeau&nbsp;» à&nbsp;droite&nbsp;; elles étaient «&nbsp;ferrées&nbsp;» à droite, sur la partie fixe du composteur, afin de créer un «&nbsp;drapeau&nbsp;» à&nbsp;gauche.</p>
@@ -702,7 +700,7 @@ p q r s t u v w x y z { | } ~</pre>
 		<p>Exemple d'encadré flottant à&nbsp;gauche et ferré à&nbsp;droite. Nulla facilisi. Integer venenatis, metus eu ultrices consectetur, lacus felis venenatis mi, quis condimentum turpis turpis nec elit. Ut vel est a lorem suscipit aliquam. Cras metus sem, sagittis sit amet <strong>important</strong> viverra quis, consectetur vel <i>italique</i> massa.</p>
 	</aside>
 
-	<p>Maecenas fringilla dignissim venenatis. Donec ut mi a odio sagittis facilisis. Fusce in risus elit. In quam turpis, elementum et elementum rutrum, dictum quis nibh. Morbi iaculis eros in purus pellentesque accumsan pellentesque sem porttitor. Aliquam erat volutpat. Donec vitae luctus neque.</p>
+	<p>Connaissez-vous l’histoire de l’inspecteur qui critique dans une classe l'importance que l’instituteur accorde à la ponctuation&nbsp;? Ce&nbsp;dernier fait alors écrire par une élève au tableau&nbsp;: «&nbsp;L’inspecteur dit&nbsp;: l’instituteur est un&nbsp;âne&nbsp;». L’inspecteur se récrie. L’instituteur fait alors corriger&nbsp;: «&nbsp;L’inspecteur, dit l’instituteur, est un&nbsp;âne&nbsp;».</p>
 
 	<p>Duis sodales erat et odio imperdiet vitae sodales ligula dapibus. Sed commodo orci a nisi iaculis sit amet mollis ante sagittis. Praesent dapibus ligula eget massa vehicula rhoncus. Vestibulum purus odio, hendrerit nec faucibus vel, commodo eu justo. Sed rhoncus ligula vel velit consectetur pharetra. In pellentesque justo ut libero bibendum sodales. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Maecenas viverra egestas felis, non vestibulum nibh hendrerit sit amet.</p>
 
@@ -712,7 +710,7 @@ p q r s t u v w x y z { | } ~</pre>
 
 	<p>Mauris lacinia, ante id sodales pretium, eros est gravida sapien, nec auctor dolor massa a dui. Vivamus consequat suscipit elit in imperdiet. In consectetur varius tortor, vel dictum ipsum dignissim vel. Nulla faucibus suscipit ipsum non porttitor. Fusce non ante non mi adipiscing faucibus. Sed odio risus, malesuada eget placerat id, semper eget turpis. Cras ante lorem, pretium ut vestibulum nec, vehicula eget orci.</p>
 
-	<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla vel lectus eget tortor cursus dapibus sit amet imperdiet lacus. Nullam purus ipsum, aliquet eget imperdiet scelerisque, interdum in felis. Maecenas dolor eros, iaculis et pretium ac, eleifend sit amet lacus. Etiam a lacus eget dui aliquet tempor. Duis dapibus magna dictum enim ultrices ac pharetra lacus convallis. Donec felis ipsum, tristique ornare fermentum quis, fringilla nec arcu. Nunc tortor arcu, fermentum in dictum sit amet, aliquam eu ante. Integer volutpat, erat cursus posuere rutrum, erat tellus varius erat, quis tempus eros risus a lacus.</p>
+	<p><q>Les règles de typographie fine, que l’on nomme <i>microtypographie</i> dans le langage professionnel des métiers du livre, sont très souvent négligées sur le Web, faute de connaissance suffisante du code typographique</q> déplorent Marie-Valentine <span class="caps">Blond</span>, Olivier <span class="caps">Marcellin</span> et Melina <span class="caps">Zerbib</span>, dans <cite>Lisibilité des sites web : Des choix typographiques au design d’information</cite>, 2009, p. 279.</p>
 
 	<aside class="box center">
 		<p>Exemple d'encadré centré. En typographie, un <dfn>filet</dfn> est un trait de taille et de graisse variables qui accompagne les éléments de texte ou les images pour les mettre en valeur et les différencier ou pour créer des tableaux et des encadrés. Il&nbsp;marque aussi la fin d'un chapitre ou sert simplement d'élément décoratif dans la composition. Le filet sert aussi à composer des cadres ou des tableaux.</p>
@@ -727,7 +725,7 @@ p q r s t u v w x y z { | } ~</pre>
 
 		<blockquote>
 			<p>Si vous utilisez des recettes de cuisine, vous avez probablement fait l'expérience de recevoir la copie d'une recette de la part d'un ami qui la partage avec vous. Et&nbsp;vous avez sans doute fait également l'expérience —&nbsp;à&nbsp;moins d'être un néophyte complet&nbsp;— de changer cette recette. Cette modification, vous la transmettez à d'autres en faisant des copies. Un programme d'ordinateur est comme une recette de cuisine</p>
-			<footer>Richard Stallman, 2001.</footer>
+			<footer class="src">Richard Stallman, 2001.</footer>
 		</blockquote>
 
 		<p>La recette de cuisine est l’exemple pris pour expliquer le <em>logiciel libre</em>. En&nbsp;réalité les recettes sont le plus souvent diffusées de façon privative, <q><abbr title="Copyright">©</abbr>&nbsp;tous droits réservés</q>. Qu’y comprendre ? <a href="http://romy.tetue.net/760" class="external">Les recettes de cuisine sont-elles libres&nbsp;?</a></p>
@@ -756,7 +754,7 @@ p q r s t u v w x y z { | } ~</pre>
 		<figcaption>Titre de l'image<br><small class="quiet">&copy; copyright</small></figcaption>
 	</figure>
 
-	<p>Paragraphe précédé d'une image calée à&nbsp;gauche. Mauris lacinia, ante id sodales pretium, eros est gravida sapien, nec auctor dolor massa a dui. Vivamus consequat suscipit elit in imperdiet. In consectetur varius tortor, vel dictum ipsum dignissim vel. Nulla faucibus suscipit ipsum non porttitor. Fusce non ante non mi adipiscing faucibus. Sed odio risus, malesuada eget placerat id, semper eget turpis. Cras ante lorem, pretium ut vestibulum nec, vehicula eget orci.</p>
+	<p>Paragraphe précédé d'une image calée à&nbsp;gauche. Connaissez-vous les <a href="https://webdesignledger.com/if-fonts-were-cats/" class="external" hreflang="en">Font Cats</a>&nbsp;? Prenez un chat, une typo et mariez-les, vous obtenez les Chats-Typographiques, un moyen comme un autre de se souvenir de quelques fontes les plus connues grâce à la photo du chat qui lui correspond.</p>
 
 	<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla vel lectus eget tortor cursus dapibus sit amet imperdiet lacus. Nullam purus ipsum, aliquet eget imperdiet scelerisque, interdum in felis. Maecenas dolor eros, iaculis et pretium ac, eleifend sit amet lacus. Etiam a lacus eget dui aliquet tempor. Duis dapibus magna dictum enim ultrices ac pharetra lacus convallis. Donec felis ipsum, tristique ornare fermentum quis, fringilla nec arcu. Nunc tortor arcu, fermentum in dictum sit amet, aliquam eu ante. Integer volutpat, erat cursus posuere rutrum, erat tellus varius erat, quis tempus eros risus a lacus.</p>
 
@@ -841,7 +839,7 @@ p q r s t u v w x y z { | } ~</pre>
 </main>
 <footer role="contentinfo">
 	<hr>
-	<p><small>&copy; Tiny Typo v2.5 2017 - MIT License - <a href="http://tinytypo.tetue.net">tinytypo.tetue.net</a></small></p>
+	<p><small>&copy; Tiny Typo v2.5.1 2017 - MIT License - <a href="http://tinytypo.tetue.net">tinytypo.tetue.net</a></small></p>
 </footer>
 </div><!--.page-->
 </body>

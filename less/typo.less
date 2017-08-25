@@ -1,4 +1,4 @@
-/*! Typographical base - Tiny Typo v2.5 2017 - MIT License - tinytypo.tetue.net */
+/*! Typographical base - Tiny Typo v2.5.1 2017 - MIT License - tinytypo.tetue.net */
 /* ------------------------------------------------------------------------------ */
 /* Sets up some sensible default typography */
 
@@ -54,11 +54,11 @@ em, i, .i { font-style: italic; }
 strong, b, .b { font-weight: bold; }
 mark, .mark { background: #ff0; color: #000; }
 
-.smaller 		{ font-size: 75%; }
-small, .small	{ font-size: 80%; }
-big, .big		{ font-size: 130%; }
-.bigger			{ font-size: 175%; }
-.biggest		{ font-size: 200%; }
+.smaller 		   { font-size: 75%; }
+small, .small	 { font-size: 80%; }
+big, .big		   { font-size: 130%; }
+.bigger			   { font-size: 175%; }
+.biggest		   { font-size: 200%; }
 
 abbr[title],
 acronym[title] { text-decoration: none; border-bottom: .1em dotted; cursor: help; }
@@ -198,21 +198,20 @@ q { quotes: "\201C" "\201D" "\2018" "\2019"; } // “ ” ‘ ’
 q:before { content: open-quote; }
 q:after { content: close-quote; }
 
+/* [fr] http://www.iamvdo.me/blog/n-oubliez-pas-la-propriete-css-quotes */
 blockquote {
   z-index: 0; // https://github.com/tetue/tinytypo/pull/9
   position: relative;
   margin-left: 0; margin-right: 0; // Reset margin by default in all browsers
-  padding-left: @alinea; padding-right: @alinea; border: solid fadeout(@color-txt,80%); border-width: 0 0 0 5px;
+  padding-left: @alinea; border: solid fadeout(@color-mid,80%); border-width: 0 0 0 5px;
 }
 blockquote:before { z-index: -1; position: absolute; left: 0; top: 0; content: "\00AB"; line-height: 0;
   font-size: 10rem; // Fix the quote size when enlarge text
-  color: fadeout(@color-txt,90%);
+  color: fadeout(@color-mid,90%);
 }
 blockquote p:last-of-type { margin-bottom: 0; }
-blockquote small:last-of-type,
-blockquote footer { display: block; font-size: 80%; }
-blockquote small:last-of-type:before,
-blockquote footer:before { content: "\2014 \00A0"; }
+blockquote .src { display: block; font-size: 80%; }
+blockquote .src:before { content: "\2014 \00A0"; }
 
 cite, .cite { font-style: italic; }
 
