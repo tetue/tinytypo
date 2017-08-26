@@ -1,4 +1,4 @@
-/*! Images and Gallery - Tiny Typo v2.5.2 2017 - MIT License - tinytypo.tetue.net */
+/*! Images and Gallery - Tiny Typo v2.5.3 2017 - MIT License - tinytypo.tetue.net */
 /* ------------------------------------------------------------------------------ */
 img {
   max-width: 100%;
@@ -49,23 +49,26 @@ img.shadow {
   box-shadow: -1px 2px 5px 1px rgba(0, 0, 0, 0.7), -1px 2px 20px rgba(255, 255, 255, 0.6) inset;
 }
 /* figure */
-figcaption,
-figure {
+figure,
+figcaption {
   display: block;
 }
 figure {
   margin: 0;
   margin-bottom: 0.75em;
-  text-align: center;
 }
 figure.center {
   margin-bottom: 1.5em;
+  text-align: center;
 }
 figure.left {
   margin-right: 1.5em;
 }
 figure.right {
   margin-left: 1.5em;
+}
+figure figcaption {
+  font-size: 80%;
 }
 @media (max-width: 640px) {
   figure {

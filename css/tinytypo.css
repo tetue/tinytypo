@@ -1,4 +1,4 @@
-/*! Typographical base - Tiny Typo v2.5.2 2017 - MIT License - tinytypo.tetue.net */
+/*! Typographical base - Tiny Typo v2.5.3 2017 - MIT License - tinytypo.tetue.net */
 /* ------------------------------------------------------------------------------ */
 /* Sets up some sensible default typography */
 html {
@@ -461,10 +461,12 @@ blockquote:before {
 blockquote p:last-of-type {
   margin-bottom: 0;
 }
+blockquote footer,
 blockquote .src {
   display: block;
   font-size: 80%;
 }
+blockquote footer:before,
 blockquote .src:before {
   content: "\2014 \00A0";
 }
@@ -612,7 +614,7 @@ Inlined to avoid required HTTP connection: h5bp.com/r */
     page-break-after: avoid;
   }
 }
-/*! Hyperlinks - Tiny Typo v2.5.2 2017 - MIT License - tinytypo.tetue.net */
+/*! Hyperlinks - Tiny Typo v2.5.3 2017 - MIT License - tinytypo.tetue.net */
 /* ---------------------------------------------------------------------- */
 /* [fr] Signaletique des hyperliens : http://letrainde13h37.fr/43/signaletique-hyperliens/ */
 a {
@@ -704,7 +706,7 @@ a:active img {
     content: '';
   }
 }
-/*! Images and Gallery - Tiny Typo v2.5.2 2017 - MIT License - tinytypo.tetue.net */
+/*! Images and Gallery - Tiny Typo v2.5.3 2017 - MIT License - tinytypo.tetue.net */
 /* ------------------------------------------------------------------------------ */
 img {
   max-width: 100%;
@@ -755,23 +757,26 @@ img.shadow {
   box-shadow: -1px 2px 5px 1px rgba(0, 0, 0, 0.7), -1px 2px 20px rgba(255, 255, 255, 0.6) inset;
 }
 /* figure */
-figcaption,
-figure {
+figure,
+figcaption {
   display: block;
 }
 figure {
   margin: 0;
   margin-bottom: 0.75em;
-  text-align: center;
 }
 figure.center {
   margin-bottom: 1.5em;
+  text-align: center;
 }
 figure.left {
   margin-right: 1.5em;
 }
 figure.right {
   margin-left: 1.5em;
+}
+figure figcaption {
+  font-size: 80%;
 }
 @media (max-width: 640px) {
   figure {
