@@ -4,20 +4,33 @@
 
 ----------------------------------------------------- */
 /* Add your style here
-[fr] Écrivez vos styles ici */
-/* For example: */
+[fr] Ecrivez vos styles ici */
+/*
+ * Choice your typo */
 body,
 .font1 {
   font-family: Georgia, 'Times New Roman', serif;
 }
+/*
+ * Define your colors */
+body {
+  background: #f8f8f8;
+  color: #222222;
+}
+/*
+ * Define your title
+ * with: http://type-scale.com
+ */
 h1,
 .h1,
 h2,
 .h2,
 h3,
 .h3 {
-  color: #990000;
+  color: #aa0000;
 }
+/*
+ * Define your links */
 a {
   text-decoration: none;
   border-bottom: 1px solid;
@@ -27,3 +40,8 @@ a:hover,
 a:active {
   color: #0000ff;
 }
+/*
+ * Enjoy CSS:
+ * http://enjoycss.com
+ *
+ */
