@@ -584,7 +584,7 @@ body { text-align: center; }
 	<h3>Citations</h3>
 	<!-- Cf.: http://romy.tetue.net/361 -->
 
-	<p>Les citations s'emploient pour signaler un changement de locuteur/trice dans le texte. Voici une citation ordinaire, avec la balise&nbsp;HTML <code>&lt;blockquote&gt;</code>, où la source est distinguée par <code>.src</code>&nbsp;:</p>
+	<p>Les citations s'emploient pour signaler un changement de locuteur/trice dans le texte. Voici une citation ordinaire, avec la balise&nbsp;HTML <code>&lt;blockquote&gt;</code>, où la source est ici distinguée par <code>.src</code>&nbsp;:</p>
 	<!-- Cf.: http://romy.tetue.net/1009 -->
 
 	<blockquote>
@@ -610,24 +610,34 @@ body { text-align: center; }
 
 	<ul class="list-none">
 		<li><code>&lt;code&gt;</code>&nbsp;: <code>extrait de code</code></li>
-		<li><code>&lt;kbd&gt;</code>&nbsp;: <kbd>raccourci-clavier</kbd></li>
-		<li><code>&lt;samp&gt;</code>&nbsp;: <samp>extrait de script</samp></li>
 		<li><code>&lt;var&gt;</code>&nbsp;: <var>variable</var></li>
+		<li><code>&lt;samp&gt;</code>&nbsp;: <samp>extrait de script</samp></li>
+		<li><code>&lt;kbd&gt;</code>&nbsp;: <kbd>raccourci-clavier</kbd></li>
 		<li><code>&lt;tt&gt;</code> <abbr title="À éviter car obsolète" class="quiet">⚠</abbr>&nbsp;: <tt>teletype</tt></li>
 	</ul>
 
-	<p>L'élément <code>&lt;pre&gt;</code> matérialise un bloc de texte pré-formaté, comme du code informatique ou de l'<abbr title="American Standard Code for Information Interchange" lang="en">ASCII</abbr>&nbsp;art&nbsp;:</p>
+	<p>L'élément <code>&lt;pre&gt;</code> matérialise un bloc de texte pré-formaté, par exemple de l'<abbr title="American Standard Code for Information Interchange" lang="en">ASCII</abbr>&nbsp;art&nbsp;:</p>
 
-	<pre>! " # $ % &amp; ' ( ) * + , - . /
-0 1 2 3 4 5 6 7 8 9 : ; &lt; = &gt; ?
-@ A B C D E F G H I J K L M N O
-P Q R S T U V W X Y Z [ \ ] ^ _
-` a b c d e f g h i j k l m n o
-p q r s t u v w x y z { | } ~</pre>
+	<pre> ____ ____ ____      
+||p |||r |||e ||     
+||__|||__|||__||     
+|/__\|/__\|/__\|
+</pre>
 
-	<p>Autre exemple, avec ligne longue&nbsp;:</p>
+	<p>Autre exemple, avec du code informatique&nbsp;:</p>
 
-	<pre>string getContent( int $wordCount [, string $format = html] [, boolean $loremipsum = true] )</pre>
+	<pre><code>&lt;!doctype html&gt;
+&lt;html lang=&quot;fr&quot;&gt;
+  &lt;head&gt;
+    &lt;title&gt;Titre de la page&lt;/title&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;css/tinytypo.css&quot;&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;h1&gt;Ma premi&egrave;re page web&lt;h1&gt;
+    &lt;!-- Le reste du contenu --&gt;
+    ...
+  &lt;/body&gt;
+&lt;/html&gt;</code></pre>
 
 	<h3>Contact</h3>
 	<!-- Cf.: https://developer.mozilla.org/fr/docs/Web/HTML/Element/address -->
@@ -679,7 +689,7 @@ p q r s t u v w x y z { | } ~</pre>
 		<p>Texte ferré à gauche avec <code>.text-left</code>. Il ne faut pas confondre le terme de justification avec l'expression « justifié » à gauche ou à droite souvent employée à tort à la place de « ferré » à gauche ou à droite. Les textes sont par défaut ferrés à gauche et sont par nature, selon la taille de l'écran, sa définition et la taille de la fenêtre dans laquelle le texte apparaît, d'une justification plus ou moins longue.</p>
 	</div>
 	<div class="text-center">
-		<p>Texte centré avec <code>.text-center</code>. Un texte peut être centré sur un axe vertical central. Lorsque vous centrez un texte, pensez à annuler le retrait de première ligne pour le paragraphe concerné, si vous l’utilisez. Pourquoi&nbsp;? Parce que le texte ne centre pas entre les marges de la page, mais entre le retrait de première ligne (à&nbsp;gauche) et la marge de&nbsp;droite. Hé&nbsp;oui, c’est la&nbsp;vie.</p>
+		<p>Texte centré avec <code>.text-center</code>. Un texte peut être centré sur un axe vertical central. Lorsque vous centrez un texte, pensez à annuler le retrait de première ligne pour le paragraphe concerné, si vous l’utilisez. Pourquoi&nbsp;? Parce que le texte ne se centre pas entre les marges de la page, mais entre le retrait de première ligne (à&nbsp;gauche) et la marge de&nbsp;droite. Hé&nbsp;oui, c’est la&nbsp;vie.</p>
 	</div>
 	<div class="text-right">
 		<p>Texte ferré à droite avec <code>.text-right</code>. Le terme de «&nbsp;fer&nbsp;» vient de la façon dont le compositeur alignait les lignes sur son composteur en typographie&nbsp;: les lignes étaient alignées sur le «&nbsp;fer&nbsp;» à gauche, sur la partie mobile du composteur, afin de créer un «&nbsp;drapeau&nbsp;» à&nbsp;droite&nbsp;; elles étaient «&nbsp;ferrées&nbsp;» à droite, sur la partie fixe du composteur, afin de créer un «&nbsp;drapeau&nbsp;» à&nbsp;gauche.</p>
@@ -724,7 +734,7 @@ p q r s t u v w x y z { | } ~</pre>
 		<img src="http://lorempixel.com/200/150/food" alt="" width="200" height="150" class="thumb round border right">
 
 		<blockquote>
-			<p>Si vous utilisez des recettes de cuisine, vous avez probablement fait l'expérience de recevoir la copie d'une recette de la part d'un ami qui la partage avec vous. Et&nbsp;vous avez sans doute fait également l'expérience —&nbsp;à&nbsp;moins d'être un néophyte complet&nbsp;— de changer cette recette. Cette modification, vous la transmettez à d'autres en faisant des copies. Un programme d'ordinateur est comme une recette de cuisine</p>
+			<p>Si vous utilisez des recettes de cuisine, vous avez probablement fait l'expérience de recevoir la copie d'une recette de la part d'un ami qui la partage avec vous. Et&nbsp;vous avez sans doute fait également l'expérience —&nbsp;à&nbsp;moins d'être un néophyte complet&nbsp;— de changer cette recette. Cette modification, vous la transmettez à d'autres en faisant des copies. Un programme d'ordinateur est comme une recette de cuisine.</p>
 			<footer class="src">Richard Stallman, 2001.</footer>
 		</blockquote>
 
@@ -839,7 +849,7 @@ p q r s t u v w x y z { | } ~</pre>
 </main>
 <footer role="contentinfo">
 	<hr>
-	<p><small>&copy; Tiny Typo v2.5.1 2017 - MIT License - <a href="http://tinytypo.tetue.net">tinytypo.tetue.net</a></small></p>
+	<p><small>&copy; Tiny Typo v2.5.2 2017 - MIT License - <a href="http://tinytypo.tetue.net">tinytypo.tetue.net</a></small></p>
 </footer>
 </div><!--.page-->
 </body>

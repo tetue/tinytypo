@@ -1,4 +1,4 @@
-/*! Typographical base - Tiny Typo v2.5.1 2017 - MIT License - tinytypo.tetue.net */
+/*! Typographical base - Tiny Typo v2.5.2 2017 - MIT License - tinytypo.tetue.net */
 /* ------------------------------------------------------------------------------ */
 /* Sets up some sensible default typography */
 html {
@@ -477,17 +477,13 @@ address {
 }
 pre,
 code,
-kbd,
-samp,
 var,
-tt {
+samp,
+kbd,
+tt,
+.tt {
   font-family: monospace, monospace;
   font-size: 1em;
-}
-pre {
-  white-space: pre-wrap;
-  word-break: break-all;
-  word-wrap: break-word;
 }
 kbd {
   white-space: nowrap;
@@ -616,7 +612,7 @@ Inlined to avoid required HTTP connection: h5bp.com/r */
     page-break-after: avoid;
   }
 }
-/*! Hyperlinks - Tiny Typo v2.5.1 2017 - MIT License - tinytypo.tetue.net */
+/*! Hyperlinks - Tiny Typo v2.5.2 2017 - MIT License - tinytypo.tetue.net */
 /* ---------------------------------------------------------------------- */
 /* [fr] Signaletique des hyperliens : http://letrainde13h37.fr/43/signaletique-hyperliens/ */
 a {
@@ -708,7 +704,7 @@ a:active img {
     content: '';
   }
 }
-/*! Images and Gallery - Tiny Typo v2.5.1 2017 - MIT License - tinytypo.tetue.net */
+/*! Images and Gallery - Tiny Typo v2.5.2 2017 - MIT License - tinytypo.tetue.net */
 /* ------------------------------------------------------------------------------ */
 img {
   max-width: 100%;

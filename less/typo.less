@@ -1,4 +1,4 @@
-/*! Typographical base - Tiny Typo v2.5.1 2017 - MIT License - tinytypo.tetue.net */
+/*! Typographical base - Tiny Typo v2.5.2 2017 - MIT License - tinytypo.tetue.net */
 /* ------------------------------------------------------------------------------ */
 /* Sets up some sensible default typography */
 
@@ -214,13 +214,16 @@ blockquote .src { display: block; font-size: 80%; }
 blockquote .src:before { content: "\2014 \00A0"; }
 
 cite, .cite { font-style: italic; }
-
 // *[cite]:after { content: close-quote " (" attr(cite) ")"; }
 
 address { font-style: normal; }
 
-pre, code, kbd, samp, var, tt { font-family: @font3; font-size: 1em; }
-pre { white-space: pre-wrap; word-break: break-all; word-wrap: break-word; }
+pre, code, var, samp, kbd, tt, .tt { font-family: @font3; font-size: 1em; }
+pre {
+  // white-space: pre-wrap;
+  // word-break: break-all;
+  // word-wrap: break-word;
+}
 kbd { white-space: nowrap; padding: .1em .3em; background-color: #eee; border: 1px solid #aaa; border-radius: 4px; box-shadow: 0 2px 0 rgba(0, 0, 0, 0.2), 0 0 0 1px #fff inset; color: #333; }
 samp { font-weight: bold; }
 var { font-style: italic; }
