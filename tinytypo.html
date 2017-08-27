@@ -354,129 +354,131 @@ body { text-align: center; }
 		<dd>Le <i lang="en">World Wide Web</i> est le système hypertexte permettant de visiter des pages sur le réseau Internet.</dd>
 	</dl>
 
-	<h3>Effets de style</h3>
+	<div style="display: none;">
+		<h3>Effets de style</h3>
 
-	<p>Avec Tiny&nbsp;Typo, il est possible de varier le style des listes avec les sélecteurs CSS <code>.list-none</code>, <code>.list-square</code>, <code>.list-disc</code>, <code>.list-circle</code> ou <code>.list-decimal</code>&nbsp;:</p>
+		<p>Avec Tiny&nbsp;Typo, il est possible de varier le style des listes avec les sélecteurs CSS <code>.list-none</code>, <code>.list-square</code>, <code>.list-disc</code>, <code>.list-circle</code> ou <code>.list-decimal</code>&nbsp;:</p>
 
-	<div class="half">
+		<div class="half">
 
-		<ul class="list-none">
+			<ul class="list-none">
+				<li>Rouge tomate, chaud et&nbsp;dynamisant</li>
+				<li>Vert sapin, naturel et&nbsp;équilibrant</li>
+				<li>Bleu océan, profond et&nbsp;reposant</li>
+				<li>Jaune soleil, vif et&nbsp;réjouissant</li>
+			</ul>
+
+			<ul class="list-square">
+				<li>Rouge tomate, chaud et&nbsp;dynamisant</li>
+				<li>Vert sapin, naturel et&nbsp;équilibrant</li>
+				<li>Bleu océan, profond et&nbsp;reposant</li>
+				<li>Jaune soleil, vif et&nbsp;réjouissant</li>
+			</ul>
+
+			<ul class="list-disc">
+				<li>Rouge tomate, chaud et&nbsp;dynamisant</li>
+				<li>Vert sapin, naturel et&nbsp;équilibrant</li>
+				<li>Bleu océan, profond et&nbsp;reposant</li>
+				<li>Jaune soleil, vif et&nbsp;réjouissant</li>
+			</ul>
+
+			<ul class="list-circle">
+				<li>Rouge tomate, chaud et&nbsp;dynamisant</li>
+				<li>Vert sapin, naturel et&nbsp;équilibrant</li>
+				<li>Bleu océan, profond et&nbsp;reposant</li>
+				<li>Jaune soleil, vif et&nbsp;réjouissant</li>
+			</ul>
+
+		</div>
+		<div class="half">
+
+			<ul class="list-decimal">
+				<li>Rouge tomate, chaud et&nbsp;dynamisant</li>
+				<li>Vert sapin, naturel et&nbsp;équilibrant</li>
+				<li>Bleu océan, profond et&nbsp;reposant</li>
+				<li>Jaune soleil, vif et&nbsp;réjouissant</li>
+			</ul>
+
+			<ul class="list-none">
+				<li>Lorem ipsum dolor sit amet</li>
+				<li>Consectetuer adipiscing elit
+					<ul class="list-circle">
+						<li>Lorem ipsum dolor sit amet</li>
+						<li>Consectetuer adipiscing elit
+							<ol>
+								<li>Rouge tomate, chaud et&nbsp;dynamisant</li>
+								<li>Vert sapin, naturel et&nbsp;équilibrant</li>
+								<li>Bleu océan, profond et&nbsp;reposant</li>
+								<li>Jaune soleil, vif et&nbsp;réjouissant</li>
+							</ol>
+						</li>
+						<li>Nam egestas, neque ac semper dictum</li>
+						<li>Jaune soleil, vif et&nbsp;réjouissant</li>
+					</ul>
+				</li>
+				<li>Nam egestas, neque ac semper dictum</li>
+				<li>Leo ante hendrerit ante</li>
+			</ul>
+		</div>
+
+		<h3 class="clear">Listes horizontales</h3>
+
+		<p>Il est possible d'afficher une liste à l'horizontale avec <code>.list-inline</code>&nbsp;:</p>
+
+		<ul class="list-inline">
 			<li>Rouge tomate, chaud et&nbsp;dynamisant</li>
 			<li>Vert sapin, naturel et&nbsp;équilibrant</li>
 			<li>Bleu océan, profond et&nbsp;reposant</li>
 			<li>Jaune soleil, vif et&nbsp;réjouissant</li>
 		</ul>
 
-		<ul class="list-square">
+		<p>Chaque liste horizontale peut être complétée avec <code>.list-inline-sep</code>, <code>.list-inline-dash</code> ou <code>.list-inline-comma</code>&nbsp;:</p>
+
+		<ul class="list-inline list-inline-sep">
 			<li>Rouge tomate, chaud et&nbsp;dynamisant</li>
 			<li>Vert sapin, naturel et&nbsp;équilibrant</li>
 			<li>Bleu océan, profond et&nbsp;reposant</li>
 			<li>Jaune soleil, vif et&nbsp;réjouissant</li>
 		</ul>
 
-		<ul class="list-disc">
+		<ul class="list-inline list-inline-dash">
 			<li>Rouge tomate, chaud et&nbsp;dynamisant</li>
 			<li>Vert sapin, naturel et&nbsp;équilibrant</li>
 			<li>Bleu océan, profond et&nbsp;reposant</li>
 			<li>Jaune soleil, vif et&nbsp;réjouissant</li>
 		</ul>
 
-		<ul class="list-circle">
+		<ul class="list-inline list-inline-comma">
 			<li>Rouge tomate, chaud et&nbsp;dynamisant</li>
 			<li>Vert sapin, naturel et&nbsp;équilibrant</li>
 			<li>Bleu océan, profond et&nbsp;reposant</li>
 			<li>Jaune soleil, vif et&nbsp;réjouissant</li>
 		</ul>
 
-	</div>
-	<div class="half">
-
-		<ul class="list-decimal">
-			<li>Rouge tomate, chaud et&nbsp;dynamisant</li>
-			<li>Vert sapin, naturel et&nbsp;équilibrant</li>
-			<li>Bleu océan, profond et&nbsp;reposant</li>
-			<li>Jaune soleil, vif et&nbsp;réjouissant</li>
-		</ul>
-
-		<ul class="list-none">
+		<ul>
 			<li>Lorem ipsum dolor sit amet</li>
-			<li>Consectetuer adipiscing elit
-				<ul class="list-circle">
-					<li>Lorem ipsum dolor sit amet</li>
-					<li>Consectetuer adipiscing elit
-						<ol>
-							<li>Rouge tomate, chaud et&nbsp;dynamisant</li>
-							<li>Vert sapin, naturel et&nbsp;équilibrant</li>
-							<li>Bleu océan, profond et&nbsp;reposant</li>
-							<li>Jaune soleil, vif et&nbsp;réjouissant</li>
-						</ol>
-					</li>
-					<li>Nam egestas, neque ac semper dictum</li>
-					<li>Jaune soleil, vif et&nbsp;réjouissant</li>
+			<li>
+			Consectetuer adipiscing elit
+				<ul class="list-inline list-inline-comma">
+					<li><a href="">Rouge tomate, chaud et&nbsp;dynamisant</a></li>
+					<li><a href="">Vert sapin, naturel et&nbsp;équilibrant</a></li>
+					<li><a href="">Bleu océan, profond et&nbsp;reposant</a></li>
+					<li><a href="">Jaune soleil, vif et&nbsp;réjouissant</a></li>
 				</ul>
 			</li>
 			<li>Nam egestas, neque ac semper dictum</li>
 			<li>Leo ante hendrerit ante</li>
 		</ul>
-	</div>
 
-	<h3 class="clear">Listes horizontales</h3>
-
-	<p>Il est possible d'afficher une liste à l'horizontale avec <code>.list-inline</code>&nbsp;:</p>
-
-	<ul class="list-inline">
-		<li>Rouge tomate, chaud et&nbsp;dynamisant</li>
-		<li>Vert sapin, naturel et&nbsp;équilibrant</li>
-		<li>Bleu océan, profond et&nbsp;reposant</li>
-		<li>Jaune soleil, vif et&nbsp;réjouissant</li>
-	</ul>
-
-	<p>Chaque liste horizontale peut être complétée avec <code>.list-inline-sep</code>, <code>.list-inline-dash</code> ou <code>.list-inline-comma</code>&nbsp;:</p>
-
-	<ul class="list-inline list-inline-sep">
-		<li>Rouge tomate, chaud et&nbsp;dynamisant</li>
-		<li>Vert sapin, naturel et&nbsp;équilibrant</li>
-		<li>Bleu océan, profond et&nbsp;reposant</li>
-		<li>Jaune soleil, vif et&nbsp;réjouissant</li>
-	</ul>
-
-	<ul class="list-inline list-inline-dash">
-		<li>Rouge tomate, chaud et&nbsp;dynamisant</li>
-		<li>Vert sapin, naturel et&nbsp;équilibrant</li>
-		<li>Bleu océan, profond et&nbsp;reposant</li>
-		<li>Jaune soleil, vif et&nbsp;réjouissant</li>
-	</ul>
-
-	<ul class="list-inline list-inline-comma">
-		<li>Rouge tomate, chaud et&nbsp;dynamisant</li>
-		<li>Vert sapin, naturel et&nbsp;équilibrant</li>
-		<li>Bleu océan, profond et&nbsp;reposant</li>
-		<li>Jaune soleil, vif et&nbsp;réjouissant</li>
-	</ul>
-
-	<ul>
-		<li>Lorem ipsum dolor sit amet</li>
-		<li>
-		Consectetuer adipiscing elit
-			<ul class="list-inline list-inline-comma">
+		<nav>
+			<ul class="list-inline list-inline-sep">
 				<li><a href="">Rouge tomate, chaud et&nbsp;dynamisant</a></li>
 				<li><a href="">Vert sapin, naturel et&nbsp;équilibrant</a></li>
 				<li><a href="">Bleu océan, profond et&nbsp;reposant</a></li>
 				<li><a href="">Jaune soleil, vif et&nbsp;réjouissant</a></li>
 			</ul>
-		</li>
-		<li>Nam egestas, neque ac semper dictum</li>
-		<li>Leo ante hendrerit ante</li>
-	</ul>
-
-	<nav>
-		<ul class="list-inline list-inline-sep">
-			<li><a href="">Rouge tomate, chaud et&nbsp;dynamisant</a></li>
-			<li><a href="">Vert sapin, naturel et&nbsp;équilibrant</a></li>
-			<li><a href="">Bleu océan, profond et&nbsp;reposant</a></li>
-			<li><a href="">Jaune soleil, vif et&nbsp;réjouissant</a></li>
-		</ul>
-	</nav>
+		</nav>
+	</div>
 </section>
 
 
