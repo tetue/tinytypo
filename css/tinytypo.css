@@ -499,7 +499,7 @@ tt,
 pre {
   -moz-tab-size: 4;
   tab-size: 4;
-  overflow-y: auto;
+  overflow-x: auto;
 }
 @media print {
   pre {
