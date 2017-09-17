@@ -13,6 +13,13 @@ body {
   font-size: 1em;
   line-height: 1.5;
 }
+/* Orientation iOS5 font-size fix */
+@media (orientation: landscape) and (max-device-width: 640px) {
+  html,
+  body {
+    -webkit-text-size-adjust: 100%;
+  }
+}
 /* Fonts */
 .font1 {
   font-family: serif;
@@ -583,13 +590,6 @@ fieldset {
   code,
   samp {
     word-wrap: break-word;
-  }
-}
-/* orientation iOS5 font-size fix */
-@media (orientation: landscape) and (max-device-width: 640px) {
-  html,
-  body {
-    -webkit-text-size-adjust: 100%;
   }
 }
 /* Print styles from HTML5 Boilerplate
