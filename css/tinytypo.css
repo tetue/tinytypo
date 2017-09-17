@@ -1,4 +1,4 @@
-/*! Typographical base - Tiny Typo v2.5.4 2017 - MIT License - tinytypo.tetue.net */
+/*! Typographical base - Tiny Typo v2.5.5 2017 - MIT License - tinytypo.tetue.net */
 /* ------------------------------------------------------------------------------ */
 /* Sets up some sensible default typography */
 html {
@@ -478,6 +478,7 @@ cite,
 address {
   font-style: normal;
 }
+/* pre and code */
 pre,
 code,
 var,
@@ -491,6 +492,14 @@ tt,
 pre {
   -moz-tab-size: 4;
   tab-size: 4;
+  overflow-y: auto;
+}
+@media print {
+  pre {
+    overflow: hidden;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+  }
 }
 kbd {
   white-space: nowrap;
@@ -566,22 +575,14 @@ fieldset {
   video {
     max-width: 100% !important;
   }
-  /* gestion des mots longs */
+  /* long words */
   textarea,
   table,
   td,
   th,
-  pre,
   code,
   samp {
     word-wrap: break-word;
-    /* cesure forcee */
-  }
-  pre,
-  code,
-  samp {
-    white-space: pre-line;
-    /* passage a la ligne specifique pour les elements a chasse fixe */
   }
 }
 /* orientation iOS5 font-size fix */
@@ -619,7 +620,7 @@ Inlined to avoid required HTTP connection: h5bp.com/r */
     page-break-after: avoid;
   }
 }
-/*! Hyperlinks - Tiny Typo v2.5.4 2017 - MIT License - tinytypo.tetue.net */
+/*! Hyperlinks - Tiny Typo v2.5.5 2017 - MIT License - tinytypo.tetue.net */
 /* ---------------------------------------------------------------------- */
 /* [fr] Signaletique des hyperliens : http://letrainde13h37.fr/43/signaletique-hyperliens/ */
 a {
@@ -711,7 +712,7 @@ a:active img {
     content: '';
   }
 }
-/*! Images and Gallery - Tiny Typo v2.5.4 2017 - MIT License - tinytypo.tetue.net */
+/*! Images and Gallery - Tiny Typo v2.5.5 2017 - MIT License - tinytypo.tetue.net */
 /* ------------------------------------------------------------------------------ */
 img {
   max-width: 100%;
