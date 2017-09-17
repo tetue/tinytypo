@@ -398,22 +398,22 @@ table {
   vertical-align: top;
 }
 @media (max-width: 640px) {
-  .table-responsive {
+  .scroll {
     width: 100%;
     overflow-y: hidden;
     overflow-x: scroll;
     margin-bottom: 1.5em;
   }
-  .table-responsive table {
+  .scroll table {
     width: 100%;
     margin-bottom: 0;
   }
-  .table-responsive thead,
-  .table-responsive tbody,
-  .table-responsive tfoot,
-  .table-responsive tr,
-  .table-responsive th,
-  .table-responsive td {
+  .scroll thead,
+  .scroll tbody,
+  .scroll tfoot,
+  .scroll tr,
+  .scroll th,
+  .scroll td {
     white-space: nowrap;
   }
 }
